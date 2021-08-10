@@ -1,1 +1,1 @@
-# figment-articles
+# Figment Articles
