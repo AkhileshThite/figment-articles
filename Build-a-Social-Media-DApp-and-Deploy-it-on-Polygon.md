@@ -1,7 +1,7 @@
 # Build a Social Media DApp & Deploy it on Polygon
-![Build a Social Media DApp   Deploy it on Polygon by Akhilesh Thite](https://user-images.githubusercontent.com/68826419/128836864-2f40f55f-66fd-4f79-822f-883ad1d03106.png)
+<img align="center" src="https://user-images.githubusercontent.com/68826419/128836864-2f40f55f-66fd-4f79-822f-883ad1d03106.png" />
 <br>
-In this tutorial, I'll show you how to Build a Social Media DApp just like YouTube & how to Deploy it on Polygon (Matic) Mumbai Test Network.<br>
+In this tutorial, I'll show you how to Build a Social Media DApp (Decentralized Apllication) just like YouTube & how to Deploy it on Polygon (Matic) Mumbai Test Network.<br>
 I'll start the tutorial from scratch (MetaMask installation process to hosting the DApp on IPFS using Fleek).<br>
 So, grab a cup of coffee ☕️ and let's get started!
 
@@ -61,3 +61,13 @@ Done! check your wallet, you'll see some Matic there. 5 Matic are enough for dep
 **Tools:** `IPFS`
 
 **Platforms:** `Ethereum, Fleek`
+We are going to use solidity language to write Smart Contracts, What are **Smart Contracts?**
+<br>
+Smart Contracts are peer-to-peer digital user agreements on the blockchain. To write Smart contracts in Ethereum we use solidity programming language.
+<br>
+First we'll setup our coding environment with the help of **Truffle**, after that we'll write **Smart Contracts** in **solidity**. 
+After writing Smart Contracts, To build the front-end of our DApp we'll use **React.js** Javascript library plus some **HTML5, CSS3 & JavaScript**.
+We're going to use **IPFS** (InterPlanetary File System) to store the hashes of our videos to the blockchain and later we'll be able to play those videos by calling those video hashes.
+
+To connect our Smart Contracts with fron-end we'll use **Web3.js** and then we'll deploy our Smart Contracts on **Polygon (Matic) Mumbai Test Network**. In the final step we'll host this DApp on IPFS by using **Fleek** platform.
+
