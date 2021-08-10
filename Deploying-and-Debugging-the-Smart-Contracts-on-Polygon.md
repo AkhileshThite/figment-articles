@@ -206,4 +206,4 @@ Error:  *** Deployment Failed ***
 Just add `networkCheckTimeout: 100000`
 <br>
 
-*If you discover any new errors and If you know the solution for it, then feel free to make a PR, we would add that Error-Fix here.*
+*If you discover any new errors and If you know the solution for it, then feel free to make a PR, we'll add your Error-Fix here.*
