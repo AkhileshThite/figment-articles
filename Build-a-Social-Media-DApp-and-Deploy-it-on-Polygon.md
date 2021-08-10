@@ -17,9 +17,9 @@ So, grab a cup of coffee ☕️ and let's get started!
 • Host the DApp on IPFS using Fleek platform.
 
 ## About the Author
-I'm Akhilesh Thite, an Indian tech enthusiast with a passion for Software Development, Open-Source, Decentralization & AI. Feel free to contact me on [GitHub](https://github.com/AkhileshThite) & [Twitter](https://twitter.com/AkhileshThite_).
+I'm Akhilesh Thite, an Indian tech enthusiast with a passion for Software Development, Open-Source & Decentralization. Feel free to connect with me on [GitHub](https://github.com/AkhileshThite) & [Twitter](https://twitter.com/AkhileshThite_).
 
-## Basics & Installation Setup
+## Basics & Installation
 We need the following things on your computer to build our DApp.
 ### Node & npm:
 <img height="140" width="140" align="left" src="https://user-images.githubusercontent.com/68826419/128867676-c789b537-9881-49cc-a044-32b672f99680.png" /> Node is a JavaScript runtime environment that executes JavaScript code outside a web browser and npm is a JavaScript package installer.
@@ -89,4 +89,16 @@ To connect our Smart Contracts with fron-end we'll use **Web3.js** and then we'l
 
 In this section, I introduced you to the basics of technology that we're going to use and roadmap of our DApp, now the interesting part. Let's make our DApp!
 
-## Truffle Setup
+## Project Setup
+To build the DApp without dealing with any annoying version errors, we'll start building by installing all the necessary dependancies by cloning the GitHub repo.
+<br>
+Clone/download the GitHub repository from [here](https://github.com/AkhileshThite/DTube). Now, open the folder with your favourite IDE, I'm using VS Code.
+
+<img align="center" src="https://user-images.githubusercontent.com/68826419/128924693-5b541c00-b990-45f5-ada4-671e81a8ddc6.png" />
+
+As the tutorial moves further, for each section you can clear the code from file and code it by yourself. You can always cross-check your code from tutorial or the original GitHub repository of the project.
+<br>
+*I'll provide **path** and GitHub **repo link** on top of each section of the tutorial, so you don't need to scroll.*
+
+## Solidity Smart Contracts
+
