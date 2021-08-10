@@ -11,7 +11,7 @@ So, grab a cup of coffee ☕️ and follow the steps.
 • Tackle the errors while deploying the smart contracts on polygon (Matic) Mumbai Test Network.
 
 ## About the Author
-I'm Akhilesh Thite, an Indian tech enthusiast with a passion for Software Development, Open-Source & Decentralization. Feel free to contact me on [GitHub](https://github.com/AkhileshThite) & [Twitter](https://twitter.com/AkhileshThite_).
+I'm Akhilesh Thite, an Indian tech enthusiast with a passion for Software Development, Open-Source & Decentralization. Feel free to connect with me on [GitHub](https://github.com/AkhileshThite) & [Twitter](https://twitter.com/AkhileshThite_).
 
 ## 1. MetaMask setup.
 To deploy the smart contracts on Matic you first have to create a Matic network in MetaMask wallet.
