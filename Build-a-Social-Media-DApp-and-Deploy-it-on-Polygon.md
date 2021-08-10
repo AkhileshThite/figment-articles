@@ -15,7 +15,7 @@ To install Node.js & npm on your computer, click on this [link](https://nodejs.o
 To check the successful installation type `npm -v` in cmd prompt or terminal, It'll show the version that means you've successfully installed it on your computer.
 
 ### Truffle:
-<img height="150" width="150" align="left" src="https://user-images.githubusercontent.com/68826419/128867776-82b05234-7301-443a-9784-388ba7e3638e.png" />Truffle is the best development environment for developing blockchain applications. Truffle gives us boilerplate code (template code) to start building our DApp.<br>
+<img height="125" width="125" align="left" src="https://user-images.githubusercontent.com/68826419/128867776-82b05234-7301-443a-9784-388ba7e3638e.png" />Truffle is the best development environment for developing blockchain applications. Truffle gives us boilerplate code (template code) to start building our DApp.<br>
 To install truffle open your `windows cmd prompt` or `mac terminal` and paste the following command.
 <br>
 `npm install -g truffle`
