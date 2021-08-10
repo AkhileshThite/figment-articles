@@ -33,7 +33,7 @@ But in this tutorial, we will deploy our smart contracts on Polygon (Matic).
 If you're looking to develop your own DApp then Ganache is the powerful tool. You can download Ganache from this [link](https://www.trufflesuite.com/ganache)
 
 <br><br>
-### MetaMask Setup
+### MetaMask Setup:
 <img height="150" width="150" align="left" src="https://user-images.githubusercontent.com/68826419/128867893-60b76424-ba7b-4d12-bf0a-e42aacb46fca.png" />MetaMask is used to interact with the Ethereum blockchain. It allows users to access their Ethereum wallet through a browser extension or mobile app, which can then be used to interact with decentralized applications.
 <br>
 To install MetaMask extension, click on this [link](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en).
@@ -71,8 +71,11 @@ Smart Contracts are peer-to-peer digital user agreements on the blockchain. To w
 <br>
 First, we'll setup our coding environment with the help of **Truffle**, after that we'll write **Smart Contracts** in **solidity**. 
 After writing Smart Contracts, To build the front-end of our DApp we'll use **React.js** Javascript library plus some **HTML5, CSS3 & JavaScript**.
-
+<br>
 We're going to use **IPFS** (InterPlanetary File System) to store the hashes of our videos to the blockchain and later we'll be able to play those videos by calling those video hashes.
-
+<br>
 To connect our Smart Contracts with fron-end we'll use **Web3.js** and then we'll deploy our Smart Contracts on **Polygon (Matic) Mumbai Test Network**. In the final step, we'll host this DApp on IPFS by using the **Fleek** platform.
 
+In this section, I introduced you to the technology that we're going to use, now the interesting part. Let's make our DApp!
+
+## Truffle Setup
