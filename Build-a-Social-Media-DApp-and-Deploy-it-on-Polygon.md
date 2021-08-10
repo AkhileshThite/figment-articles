@@ -1,5 +1,5 @@
 # Build a Social Media DApp & Deploy it on Polygon
-<img align="center" src="https://user-images.githubusercontent.com/68826419/128836864-2f40f55f-66fd-4f79-822f-883ad1d03106.png" />
+<div align="center"><img src="https://user-images.githubusercontent.com/68826419/128836864-2f40f55f-66fd-4f79-822f-883ad1d03106.png" /></div>
 <br>
 In this tutorial, I'll show you how to Build a Social Media DApp (Decentralized Apllication) just like YouTube & how to Deploy it on Polygon (Matic) Mumbai Test Network.<br>
 I'll start the tutorial from scratch (MetaMask installation process to hosting the DApp on IPFS using Fleek).<br>
@@ -90,13 +90,13 @@ To connect our Smart Contracts with fron-end we'll use **Web3.js** and then we'l
 In this section, I introduced you to the basics of technology that we're going to use and roadmap of our DApp, now the interesting part. Let's make our DApp!
 
 ## Project Setup
-To build the DApp without dealing with any annoying version errors, we'll start building by installing all the necessary dependancies by cloning the GitHub repo.
+To build the DApp without dealing with any annoying version errors, we'll start building by installing all the necessary dependencies by cloning the GitHub repo.
 <br>
-Clone/download the GitHub repository from [here](https://github.com/AkhileshThite/DTube). Now, open the folder with your favourite IDE, I'm using VS Code.
+Clone/download the GitHub repository from [here](https://github.com/AkhileshThite/DTube). Now, open the folder with your favorite IDE, I'm using VS Code.
 
-<img align="center" src="https://user-images.githubusercontent.com/68826419/128924693-5b541c00-b990-45f5-ada4-671e81a8ddc6.png" />
+<div align="center"><img src="https://user-images.githubusercontent.com/68826419/128924693-5b541c00-b990-45f5-ada4-671e81a8ddc6.png" /></div>
 
-As the tutorial moves further, for each section you can clear the code from file and code it by yourself. You can always cross-check your code from tutorial or the original GitHub repository of the project.
+As the tutorial moves further, for each section you can clear the code from the file and code it by yourself. You can always cross-check your code from this tutorial or the original GitHub repository of the project.
 <br>
 *I'll provide **path** and GitHub **repo link** on top of each section of the tutorial, so you don't need to scroll.*
 
