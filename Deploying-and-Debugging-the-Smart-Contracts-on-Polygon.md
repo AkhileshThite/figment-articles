@@ -1,5 +1,6 @@
 # Deploying & Debugging the Smart Contracts on Polygon
-![Deploying   Debugging the Smart Contracts on Polygon by Akhilesh Thite](https://user-images.githubusercontent.com/68826419/128823287-bb88b2f1-5505-4f0a-aa0c-d67708d58546.png)
+<div align="center"><img src="https://user-images.githubusercontent.com/68826419/128823287-bb88b2f1-5505-4f0a-aa0c-d67708d58546.png" /></div>
+<br>
 In this tutorial, I'll show you how to deploy smart contracts of your DApp to the Polygon (Matic) Mumbai Test Network.
 I'll cover all the possible errors which I faced during the deployment.
 So, grab a cup of coffee ☕️ and follow the steps.
@@ -8,11 +9,12 @@ So, grab a cup of coffee ☕️ and follow the steps.
 To deploy the smart contracts on Matic you first have to create a Matic network in MetaMask wallet.
 `Settings -> Networks -> Add network -> Save`
 <br>
-<div align="center"><img src="https://user-images.githubusercontent.com/68826419/128823596-49410c34-9244-42a2-ac3e-1ee3beff63f6.png" /></div><br>
+<div align="center"><img src="https://user-images.githubusercontent.com/68826419/128823596-49410c34-9244-42a2-ac3e-1ee3beff63f6.png" /></div>
+<br>
 To get test Matic for deployment and testing,
 <br>
 go to Matic Faucet -> Select Mumbai -> Paste wallet address -> Submit
-<br>Matic Faucet link: https://faucet.matic.network 
+<br>Matic Faucet [link](https://faucet.matic.network)
 <br>
 Done! check your wallet, you'll see some Matic there.
 
