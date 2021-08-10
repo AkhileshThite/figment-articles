@@ -7,7 +7,7 @@ So, grab a cup of coffee ☕️ and follow the steps.
 ## 1. MetaMask setup.
 To deploy the smart contracts on Matic you first have to create a Matic network in MetaMask wallet.
 `Settings -> Networks -> Add network -> Save`<br>
-<img style="align:center" href="https://user-images.githubusercontent.com/68826419/128823596-49410c34-9244-42a2-ac3e-1ee3beff63f6.png"></img><br>
+<div align="center"><img src="https://user-images.githubusercontent.com/68826419/128823596-49410c34-9244-42a2-ac3e-1ee3beff63f6.png" /></div><br>
 To get test Matic for deployment and testing, 
 go to -> [Matic Faucet](https://faucet.matic.network) -> Select Mumbai -> Paste wallet address -> Submit
 Done! check your wallet, you'll see some Matic there.
