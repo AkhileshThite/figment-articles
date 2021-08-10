@@ -5,6 +5,9 @@ In this tutorial, I'll show you how to deploy smart contracts of your DApp to th
 I'll cover all the possible errors which I faced during the deployment.
 So, grab a cup of coffee ☕️ and follow the steps.
 
+## About the Author
+I'm Akhilesh Thite, an Indian tech enthusiast with a passion for Software Development, Open-Source, Decentralization & AI. My [GitHub](https://github.com/AkhileshThite) & [Twitter](https://twitter.com/AkhileshThite_)
+
 ## 1. MetaMask setup.
 To deploy the smart contracts on Matic you first have to create a Matic network in MetaMask wallet.
 `Settings -> Networks -> Add network -> Save`
@@ -14,7 +17,8 @@ To deploy the smart contracts on Matic you first have to create a Matic network 
 To get test Matic for deployment and testing,
 <br>
 go to Matic Faucet -> Select Mumbai -> Paste wallet address -> Submit
-<br>Matic Faucet [link](https://faucet.matic.network)
+<br>
+Matic Faucet link: https://faucet.matic.network
 <br>
 Done! check your wallet, you'll see some Matic there.
 
