@@ -47,7 +47,8 @@ Create a Matic network. Fill out the information as given in the image below.
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/128823596-49410c34-9244-42a2-ac3e-1ee3beff63f6.png" /></div>
 <br>
 Now you'll notice zero balance (0 MATIC) in your wallet, To get test Matic for deployment and testing,<br>
-**go to [Matic Faucet](https://faucet.matic.network) -> Select Mumbai -> Paste wallet address -> Submit**<br>
+go to Matic Faucet -> Select Mumbai -> Paste wallet address -> Submit<br>
+Matic Faucet link: https://faucet.matic.network <br>
 Done! check your wallet, you'll see some Matic there. 5 Matic are enough for deployment and testing the DApp.
 <br>
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/128877273-327f6d3d-24a2-4637-8392-004a1f62048a.png" /></div>
