@@ -10,8 +10,9 @@ We need the following things on your computer to build our DApp.
 ### Node | npm: 
 
 ### Truffle:
-Truffle is the best development environment for developing blockchain applications. Truffle gives us boilerplate code (template code) to start building our DApp.
+Truffle is the best development environment for developing blockchain applications. Truffle gives us boilerplate code (template code) to start building our DApp.<br>
 To install truffle open your `windows cmd prompt` or `mac terminal` and paste the following command.
+<br>
 `npm install -g truffle`
 
 
