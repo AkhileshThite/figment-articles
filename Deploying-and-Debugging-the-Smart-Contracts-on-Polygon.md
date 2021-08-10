@@ -21,7 +21,8 @@ go to Matic Faucet -> Select Mumbai -> Paste wallet address -> Submit
 Matic Faucet link: https://faucet.matic.network
 <br>
 Done! check your wallet, you'll see some Matic there.
-<div align="center"><img src="https://user-images.githubusercontent.com/68826419/128876691-2659718c-08a2-481f-abf9-5347d58b7123.png" /></div>
+<br>
+<div align="center"><img src="https://user-images.githubusercontent.com/68826419/128877273-327f6d3d-24a2-4637-8392-004a1f62048a.png" /></div>
 
 
 ## 2. truffle-config
