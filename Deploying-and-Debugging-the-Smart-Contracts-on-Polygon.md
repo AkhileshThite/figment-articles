@@ -1,6 +1,6 @@
 # Deploying & Debugging the Smart Contracts on Polygon
 ![Deploying   Debugging the Smart Contracts on Polygon by Akhilesh Thite](https://user-images.githubusercontent.com/68826419/128823287-bb88b2f1-5505-4f0a-aa0c-d67708d58546.png)
-In this article, I'll show you how to deploy smart contracts of your DApp to the Polygon (Matic) Mumbai Test Network.
+In this tutorial, I'll show you how to deploy smart contracts of your DApp to the Polygon (Matic) Mumbai Test Network.
 I'll cover all the possible errors which I faced during the deployment.
 So, grab a cup of coffee ☕️ and follow the steps.
 
