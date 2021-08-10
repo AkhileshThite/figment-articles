@@ -60,14 +60,19 @@ Done! check your wallet, you'll see some Matic there. 5 Matic are enough for dep
 
 **Tools:** `IPFS`
 
+**Network:** `Polygon (Matic)`
+
 **Platforms:** `Ethereum, Fleek`
+
+### Roadmap:
 We are going to use solidity language to write Smart Contracts, What are **Smart Contracts?**
 <br>
 Smart Contracts are peer-to-peer digital user agreements on the blockchain. To write Smart contracts in Ethereum we use solidity programming language.
 <br>
-First we'll setup our coding environment with the help of **Truffle**, after that we'll write **Smart Contracts** in **solidity**. 
+First, we'll setup our coding environment with the help of **Truffle**, after that we'll write **Smart Contracts** in **solidity**. 
 After writing Smart Contracts, To build the front-end of our DApp we'll use **React.js** Javascript library plus some **HTML5, CSS3 & JavaScript**.
+
 We're going to use **IPFS** (InterPlanetary File System) to store the hashes of our videos to the blockchain and later we'll be able to play those videos by calling those video hashes.
 
-To connect our Smart Contracts with fron-end we'll use **Web3.js** and then we'll deploy our Smart Contracts on **Polygon (Matic) Mumbai Test Network**. In the final step we'll host this DApp on IPFS by using **Fleek** platform.
+To connect our Smart Contracts with fron-end we'll use **Web3.js** and then we'll deploy our Smart Contracts on **Polygon (Matic) Mumbai Test Network**. In the final step, we'll host this DApp on IPFS by using the **Fleek** platform.
 
