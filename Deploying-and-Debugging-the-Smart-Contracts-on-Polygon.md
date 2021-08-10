@@ -9,7 +9,8 @@ To deploy the smart contracts on Matic you first have to create a Matic network 
 `Settings -> Networks -> Add network -> Save`<br>
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/128823596-49410c34-9244-42a2-ac3e-1ee3beff63f6.png" /></div><br>
 To get test Matic for deployment and testing, 
-go to -> [Matic Faucet](https://faucet.matic.network) -> Select Mumbai -> Paste wallet address -> Submit
+`go to -> Matic Faucet -> Select Mumbai -> Paste wallet address -> Submit`
+Matic Faucet link: https://faucet.matic.network)
 Done! check your wallet, you'll see some Matic there.
 
 ## 2. truffle-config
@@ -114,7 +115,7 @@ If you get any of these errors then follow these steps
 ```javascript
 Error: PollingBlockTracker - encountered an error while attempting to update latest block:
 ```
-Change https://rpc-mumbai.matic.today by using [Infura custom RPC](https://infura.io)
+Change `https://rpc-mumbai.matic.today` by using [Infura custom RPC](https://infura.io)
 
 ### Fix_1:
 `infura -> Create new project -> Settings -> Endpoints -> Polygon Mumbai`
@@ -135,7 +136,7 @@ Paste your PROJECT_ID there from .env file.
 If still dealing with error, try this 2nd fix.
 
 ### Fix_2:
-Change https://rpc-mumbai.matic.today by using [Matic custom RPC](https://rpc.maticvigil.com/)
+Change `https://rpc-mumbai.matic.today` by using [Matic custom RPC](https://rpc.maticvigil.com/)
 ```javascript
     matic: {
       provider: () => new HDWalletProvider(process.env.MNEMONIC, 
