@@ -115,3 +115,69 @@ If you get any of these errors then follow these steps
 Error: PollingBlockTracker - encountered an error while attempting to update latest block:
 ```
 Change https://rpc-mumbai.matic.today by using [Infura custom RPC](https://infura.io)
+
+### Fix_1:
+`infura -> Create new project -> Settings -> Endpoints -> Polygon Mumbai`
+```javascript
+    matic: {
+      provider: () => new HDWalletProvider(process.env.MNEMONIC, 
+      `https://polygon-mumbai.infura.io/v3/process.env.PROJECT_ID`),
+      network_id: 80001,
+      confirmations: 2,
+      timeoutBlocks: 200,
+      skipDryRun: true,
+    },
+  },
+```
+Paste your PROJECT_ID there from .env file.
+`truffle migrate --network matic --reset`
+
+If still dealing with error, try this 2nd fix.
+
+### Fix_2:
+Change https://rpc-mumbai.matic.today by using [Matic custom RPC](https://rpc.maticvigil.com/)
+```javascript
+    matic: {
+      provider: () => new HDWalletProvider(process.env.MNEMONIC, 
+      `https://rpc-mumbai.maticvigil.com/v1/process.env.PROJECT_ID`),
+      network_id: 80001,
+      confirmations: 2,
+      timeoutBlocks: 200,
+      skipDryRun: true,
+    },
+  },
+```
+Paste your PROJECT_ID there from .env file.
+`truffle migrate --network matic --reset`
+### Error:
+```javascript
+*** Deployment Failed ***
+
+"Migrations" -- only replay-protected (EIP-155) transactions allowed over RPC.
+```
+### Fix:
+`npm install @truffle/hdwallet-provider@1.4.0`
+Truffle hdwallet-provider version 1.4.0 will fix this error.
+
+### Error:
+```javascript
+Error:  *** Deployment Failed ***
+
+"Migrations" -- Transaction was not mined within 750 seconds, please make sure your transaction was properly sent. Be aware that it might still be mined!.
+```
+### Fix:
+```javascript
+    matic: {
+      provider: () => new HDWalletProvider(process.env.MNEMONIC, 
+      `https://rpc-mumbai.maticvigil.com/v1/process.env.PROJECT_ID`),
+      network_id: 80001,
+      confirmations: 2,
+      timeoutBlocks: 200,
+      skipDryRun: true,
+      networkCheckTimeout: 100000,
+    },
+  },
+```
+Just add `networkCheckTimeout: 100000`
+
+*If you discover any new errors and If you know the solution for it, then feel free to make a PR, we would add that Error-Fix here.*
