@@ -5,6 +5,13 @@ In this tutorial, I'll show you how to Build a Social Media DApp (Decentralized 
 I'll start the tutorial from scratch (MetaMask installation process to hosting the DApp on IPFS using Fleek).<br>
 So, grab a cup of coffee ☕️ and let's get started!
 
+## After this tutorial you will be able to:
+• Build a Full Stack Decentralized Apllication on top of Ethereum Blockchain.
+• Deploy the smart contracts on polygon (Matic) Mumbai Test Network.
+• Use truffle & MetaMask effectively.
+• Understand Web3 concepts.
+• Host the DApp on IPFS using Fleek platform.
+
 ## About the Author
 I'm Akhilesh Thite, an Indian tech enthusiast with a passion for Software Development, Open-Source, Decentralization & AI. Feel free to contact me on [GitHub](https://github.com/AkhileshThite) & [Twitter](https://twitter.com/AkhileshThite_).
 
@@ -76,6 +83,6 @@ We're going to use **IPFS** (InterPlanetary File System) to store the hashes of 
 <br>
 To connect our Smart Contracts with fron-end we'll use **Web3.js** and then we'll deploy our Smart Contracts on **Polygon (Matic) Mumbai Test Network**. In the final step, we'll host this DApp on IPFS by using the **Fleek** platform.
 
-In this section, I introduced you to the technology that we're going to use, now the interesting part. Let's make our DApp!
+In this section, I introduced you to the basics of technology that we're going to use and roadmap of our DApp, now the interesting part. Let's make our DApp!
 
 ## Truffle Setup
