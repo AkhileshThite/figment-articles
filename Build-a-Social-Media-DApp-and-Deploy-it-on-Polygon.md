@@ -8,7 +8,7 @@ So, grab a cup of coffee ☕️ and let's get started!
 ## Basics & Installation Setup
 We need the following things on your computer to build our DApp.
 ### Node & npm:
-<img height="100" width="100" align="left" src="https://user-images.githubusercontent.com/68826419/128866944-71a2c488-8f14-47f2-b14b-445bf1856363.png" /> Node is a JavaScript runtime environment that executes JavaScript code outside a web browser and npm is a JavaScript package installer.
+<img height="150" width="150" align="left" src="https://user-images.githubusercontent.com/68826419/128866944-71a2c488-8f14-47f2-b14b-445bf1856363.png" /> Node is a JavaScript runtime environment that executes JavaScript code outside a web browser and npm is a JavaScript package installer.
 <br>
 To install Node.js & npm on your computer, click on this [link](https://nodejs.org/en/download/) -> download the file as per your computer requirement -> Install the file.
 <br>
