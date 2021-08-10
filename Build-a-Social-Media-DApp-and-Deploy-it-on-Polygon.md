@@ -60,7 +60,7 @@ Create a Matic network. Fill out the information as given in the image below.
 Now you'll notice zero balance (0 MATIC) in your wallet, To get test Matic for deployment and testing,<br>
 go to Matic Faucet -> Select Mumbai -> Paste wallet address -> Submit<br>
 Matic Faucet link: https://faucet.matic.network <br>
-Done! check your wallet, you'll see some Matic there. 5 Matic are enough for deployment and testing the DApp.
+Done! check your wallet, you'll see some Matic there.
 <br>
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/128877273-327f6d3d-24a2-4637-8392-004a1f62048a.png" /></div>
 
@@ -95,10 +95,13 @@ To build the DApp without dealing with any annoying version errors, we'll start 
 Clone/download the GitHub repository from [here](https://github.com/AkhileshThite/DTube). Now, open the folder with your favorite IDE, I'm using VS Code.
 
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/128924693-5b541c00-b990-45f5-ada4-671e81a8ddc6.png" /></div>
+<br>
+Install all the dependencies by the following command:
+`npm install`
 
-As the tutorial moves further, for each section you can clear the code from the file and code it by yourself. You can always cross-check your code from this tutorial or the original GitHub repository of the project.
+Note:- As the tutorial moves further, for each section you can clear the code from the file and code it by yourself. You can always cross-check your code from this tutorial or the original GitHub repository of the project.
 <br>
 *I'll provide **path** and GitHub **repo link** on top of each section of the tutorial, so you don't need to scroll.*
 
-## Solidity Smart Contracts
+## Writing Smart Contracts in Solidity
 
