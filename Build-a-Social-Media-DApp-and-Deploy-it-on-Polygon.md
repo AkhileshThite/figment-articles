@@ -95,10 +95,10 @@ To build the DApp without dealing with any annoying version errors, we'll start 
 Clone/download the GitHub repository from [here](https://github.com/AkhileshThite/DTube). Now, open the folder with your favorite IDE, I'm using VS Code.
 
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/128924693-5b541c00-b990-45f5-ada4-671e81a8ddc6.png" /></div>
-<br>
+
 Install all the dependencies by the following command:
 `npm install`
-
+<br>
 Note:- As the tutorial moves further, for each section you can clear the code from the file and code it by yourself. You can always cross-check your code from this tutorial or the original GitHub repository of the project.
 <br>
 *I'll provide **path** and GitHub **repo link** on top of each section of the tutorial, so you don't need to scroll.*
