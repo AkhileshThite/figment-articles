@@ -36,7 +36,7 @@ If you're looking to develop your own DApp then Ganache is the powerful tool. Yo
 ### MetaMask Setup
 <img height="150" width="150" align="left" src="https://user-images.githubusercontent.com/68826419/128867893-60b76424-ba7b-4d12-bf0a-e42aacb46fca.png" />MetaMask is used to interact with the Ethereum blockchain. It allows users to access their Ethereum wallet through a browser extension or mobile app, which can then be used to interact with decentralized applications.
 <br>
-To install MetaMask extension, head over to `Google Chrome extension store -> search for the word "MetaMask" -> install the extension`
+To install MetaMask extension, click on this [link](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en).
 <br>
 Now, `Create a MetaMask account -> save the mnemonics (12 secret words) because we need those mnemonics at the time of deployment`
 <br>
@@ -52,3 +52,12 @@ Matic Faucet link: https://faucet.matic.network <br>
 Done! check your wallet, you'll see some Matic there. 5 Matic are enough for deployment and testing the DApp.
 <br>
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/128877273-327f6d3d-24a2-4637-8392-004a1f62048a.png" /></div>
+
+### Tech Stack:
+**Languages:** `Solidity, JavaScript, HTML5, CSS3`
+
+**Libraries:** `React.js, Web3.js`
+
+**Tools:** `IPFS`
+
+**Platforms:** `Ethereum, Fleek`
