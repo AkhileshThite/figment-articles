@@ -6,16 +6,21 @@ So, grab a cup of coffee ☕️ and follow the steps.
 
 ## 1. MetaMask setup.
 To deploy the smart contracts on Matic you first have to create a Matic network in MetaMask wallet.
-`Settings -> Networks -> Add network -> Save`<br>
+`Settings -> Networks -> Add network -> Save`
+<br>
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/128823596-49410c34-9244-42a2-ac3e-1ee3beff63f6.png" /></div><br>
-To get test Matic for deployment and testing,<br>
+To get test Matic for deployment and testing,
+<br>
 go to -> Matic Faucet -> Select Mumbai -> Paste wallet address -> Submit
-<br>Matic Faucet link: https://faucet.matic.network <br>
+<br>Matic Faucet link: https://faucet.matic.network 
+<br>
 Done! check your wallet, you'll see some Matic there.
 
 ## 2. truffle-config
-`truffle-config.js` for Mac users<br>
-`truffle.js` for Windows users<br>
+`truffle-config.js` for Mac users
+<br>
+`truffle.js` for Windows users
+<br>
 truffle-config file is the main and the most important file of your DApp which interacts with everything. In this file, you can mention the path of your solidity file (smart contracts), ABI's, and define **networks**.
 ```javascript
 const HDWalletProvider = require("@truffle/hdwallet-provider")
@@ -69,9 +74,11 @@ You can set gas price and gas limits for faster transactions by adding
 ```
 
 ## 3. Deploy Smart Contracts
-Command: `truffle migrate --network matic`<br>
+Command: `truffle migrate --network matic`
+<br>
 If you're deploying it second time then deploy with this command just to **reset** and avoid json errors.<br>
-command: `truffle migrate --network matic --reset`<br>
+command: `truffle migrate --network matic --reset`
+<br>
 If everything worked fine, you'll see something like this:
 ```javascript
 2_deploy_contracts.js
@@ -116,9 +123,10 @@ If you get any of these errors then follow these steps
 ```javascript
 Error: PollingBlockTracker - encountered an error while attempting to update latest block:
 ```
-Change `https://rpc-mumbai.matic.today` by using [Infura custom RPC](https://infura.io)
 
 ### Fix_1:
+Change `https://rpc-mumbai.matic.today` by using [Infura custom RPC](https://infura.io)
+<br>
 `infura -> Create new project -> Settings -> Endpoints -> Polygon Mumbai`
 ```javascript
     matic: {
@@ -131,13 +139,15 @@ Change `https://rpc-mumbai.matic.today` by using [Infura custom RPC](https://inf
     },
   },
 ```
-Paste your PROJECT_ID there from .env file.<br>
-`truffle migrate --network matic --reset`<br>
+Paste your PROJECT_ID there from .env file.
+<br>
+`truffle migrate --network matic --reset`
 
 If still dealing with error, try this 2nd fix.
 
 ### Fix_2:
 Change `https://rpc-mumbai.matic.today` by using [Matic custom RPC](https://rpc.maticvigil.com/)
+<br>
 ```javascript
     matic: {
       provider: () => new HDWalletProvider(process.env.MNEMONIC, 
@@ -149,7 +159,8 @@ Change `https://rpc-mumbai.matic.today` by using [Matic custom RPC](https://rpc.
     },
   },
 ```
-Paste your PROJECT_ID there from .env file.<br>
+Paste your PROJECT_ID there from .env file.
+<br>
 `truffle migrate --network matic --reset`
 
 ### Error:
@@ -160,7 +171,8 @@ Paste your PROJECT_ID there from .env file.<br>
 ```
 
 ### Fix:
-`npm install @truffle/hdwallet-provider@1.4.0`<br>
+`npm install @truffle/hdwallet-provider@1.4.0`
+<br>
 Truffle hdwallet-provider version 1.4.0 will fix this error.
 
 ### Error:
@@ -182,6 +194,7 @@ Error:  *** Deployment Failed ***
     },
   },
 ```
-Just add `networkCheckTimeout: 100000`<br>
+Just add `networkCheckTimeout: 100000`
+<br>
 
 *If you discover any new errors and If you know the solution for it, then feel free to make a PR, we would add that Error-Fix here.*
