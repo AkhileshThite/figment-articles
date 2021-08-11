@@ -8,7 +8,7 @@ I'll start the tutorial from scratch (MetaMask installation process to hosting t
 So, grab a cup of coffee ☕️ and let's get started!
 
 
-*About this project: DTube was created by me during the ETHOdyssey Virtual Hackathon in July-Aug 2021. All the resources I used to create this DApp are linked at the bottom "References" section*
+*About this project: DTube was created by me during the ETHOdyssey Virtual Hackathon in July-Aug 2021. All the resources I used to create this DApp are linked at the bottom in "References" section.*
 
 ## After this tutorial you will be able to:
 • Build a Full Stack Decentralized Apllication on top of Ethereum Blockchain.
@@ -85,16 +85,22 @@ Done! check your wallet, you'll see some Matic there.
 **Platforms:** `Ethereum, Fleek`
 
 ### Roadmap:
-We are going to use solidity language to write Smart Contracts, What are **Smart Contracts?**
-<br>
-Smart Contracts are peer-to-peer digital user agreements on the blockchain. To write Smart contracts in Ethereum we use solidity programming language.
-<br>
 First, we'll setup our coding environment with the help of **Truffle**, after that we'll write **Smart Contracts** in **solidity**. 
 After writing Smart Contracts, To build the front-end of our DApp we'll use **React.js** Javascript library plus some **HTML5, CSS3 & JavaScript**.
 <br>
 We're going to use **IPFS** (InterPlanetary File System) to store the hashes of our videos to the blockchain and later we'll be able to play those videos by calling those video hashes.
 <br>
 To connect our Smart Contracts with fron-end we'll use **Web3.js** and then we'll deploy our Smart Contracts on **Polygon (Matic) Mumbai Test Network**. In the final step, we'll host this DApp on IPFS by using the **Fleek** platform.
+
+
+What are **Smart Contracts?**
+<br>
+Smart Contracts are peer-to-peer digital user agreements on the blockchain. To write Smart contracts in Ethereum we use solidity programming language.
+
+
+What is **Web3.js?**
+<br>
+Web3.js is a set of JavaScript libraries that acts like a port to the blockchain world. Web3 is a medium to connect our Smart Contracts to the front-end of the DApp.
 
 In this section, I introduced you to the basics of technology that we're going to use and roadmap of our DApp, now the interesting part. Let's make our DApp!
 
@@ -103,9 +109,9 @@ To build the DApp without dealing with any annoying version errors & instead of 
 <br>
 Clone/download the GitHub repository from [here](https://github.com/AkhileshThite/DTube).
 <br>
-`git clone https://github.com/AkhileshThite/DTube.git` this will copy the folder from git on your computer.
+`git clone https://github.com/AkhileshThite/DTube.git` this command will copy the folder from git on your computer.
 <br>
-`cd [repo_name]` this will open that repo you just copied from GitHub.
+`cd [repo_name]` this command will open that repo you just copied from GitHub.
 <br>
 Now, open the folder with your favorite IDE, I'm using VS Code.
 
@@ -165,7 +171,7 @@ Let's create a `uploadVideo` function, inside the function we're making sure the
     // Increment video id
     videoCount ++;
 ```
-Finally, we'll add the video to the contract by including `videoCount`,`_videoHash`, `_title`, `msg.sender`(which is global variable in solidity, it simply means the current user). Then we'll create a function `VideoUploaded` to trigger that event.
+Finally, we'll add the video to the contract by including `videoCount`,`_videoHash`, `_title`, `msg.sender`(which is global variable in solidity, it simply means the current user) variables. Then we'll create a function `VideoUploaded` to trigger the event.
 ```solidity
     // Add video to the contract
     videos[videoCount] = Video(videoCount, _videoHash, _title, msg.sender);
