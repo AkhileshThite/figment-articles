@@ -7,6 +7,9 @@ In this tutorial, I'll show you how to Build a Social Media DApp (Decentralized 
 I'll start the tutorial from scratch (MetaMask installation process to hosting the DApp on IPFS using Fleek).<br>
 So, grab a cup of coffee ☕️ and let's get started!
 
+
+*About this project: DTube was created by me during the ETHOdyssey Virtual Hackathon in July-Aug 2021. All the resources I used to create this DApp are linked at the bottom "References" section*
+
 ## After this tutorial you will be able to:
 • Build a Full Stack Decentralized Apllication on top of Ethereum Blockchain.
 <br>
@@ -120,7 +123,7 @@ Path:`/src/contracts/DTube.sol`
 ### Data Structure:
 We are going to design Smart Contracts to upload videos (With IPFS video hash), Store videos (With the title and IPFS video hash), list videos (by video IDs) to the blockchain.
 <br>
-Let's define the version of solidity and create a contract called DTube. Initially we're saying that the video count is zero. `uint` means unsigned integer (Positive number) data type. `string` means char data type. We'll call this contract later on by the name "DTube". The state variable `public` doesn't have to do anything with sequrity.
+Let's define the version of solidity and create a contract called DTube. Initially we're saying that the video count is zero. `uint` means unsigned integer (Positive number) data type. `string` means char data type. We'll call this contract later on by the name "DTube". The state variable `public` doesn't have to do anything with sequrity. `mapping(uint => Video) public videos` this is how the mapping is done in solidity, for multiple videos we're creating a variable `Videos` by using the data type of each element `Video` which we'll create in next code snippet.
 ```solidity
 pragma solidity ^0.5.0;
 
@@ -129,7 +132,7 @@ contract DTube {
   string public name = "DTube";
   mapping(uint => Video) public videos;
 ```
-Now, let's create data types and event.
+Now, let's create `Video` data types and `VideoUploaded` event.
 ```solidity
 // Create data types
   struct Video {
@@ -145,4 +148,29 @@ Now, let's create data types and event.
     string title,
     address author
   );
+```
+Let's create a `uploadVideo` function, inside that we're making sure the `video hash`, `video title`, `uploader address` exists by using some conditions (length should be greater than zero). After that, to list down the videos we'll increaste the video count (videoCount = videoCount + 1).
+```solidity
+  constructor() public {
+  } 
+  
+  function uploadVideo(string memory _videoHash, string memory _title) public {
+    // Make sure the video hash exists
+    require(bytes(_videoHash).length > 0);
+    // Make sure video title exists
+    require(bytes(_title).length > 0);
+    // Make sure uploader address exists
+    require(msg.sender!=address(0));
+
+    // Increment video id
+    videoCount ++;
+```
+Finally, we'll add the video to the contract by including `videoCount`,`_videoHash`, `_title`, `msg.sender`(which is global variable in solidity, it simply means the current user). Then we'll create a function `VideoUploaded` to trigger that event.
+```solidity
+    // Add video to the contract
+    videos[videoCount] = Video(videoCount, _videoHash, _title, msg.sender);
+    // Trigger an event
+    emit VideoUploaded(videoCount, _videoHash, _title, msg.sender);
+  }
+}
 ```
