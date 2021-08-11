@@ -209,7 +209,7 @@ Hence, to deploy our Smart Contracts to the Blockchain it is important to create
 
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/129098791-50cf3734-1b9c-4391-bfab-1d7b08e20b1a.png" /></div>
 
-The code is similar to `1_initial_migration.js`, just replace migrations to DTube.
+The code is similar to `1_initial_migration.js`, just replace migrations with DTube.
 <br>
 `2_initial_migration.js` will look like this:
 ```javascript
@@ -219,3 +219,5 @@ module.exports = function(deployer) {
   deployer.deploy(DTube);
 };
 ```
+
+## Tests
