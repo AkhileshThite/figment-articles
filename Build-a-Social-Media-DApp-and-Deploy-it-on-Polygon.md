@@ -69,7 +69,7 @@ Now you'll notice zero balance (0 MATIC) in your wallet, To get test Matic for d
 <br>
 Matic Faucet [link](https://faucet.matic.network)
 <br>
-Done! check your wallet, you'll see some Matic there.
+Done! check your wallet, you'll see some Matic there. *We only need small amount of Matic (5-10 Matic) to deploy and test the DApp*
 <br>
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/128877273-327f6d3d-24a2-4637-8392-004a1f62048a.png" /></div>
 
@@ -126,7 +126,8 @@ Note:- As the tutorial moves further, for each section you can clear the code fr
 
 ## Writing Smart Contracts in Solidity
 Path:`/src/contracts/DTube.sol`
-### Data Structure:
+
+
 We are going to design Smart Contracts to upload videos (With IPFS video hash), Store videos (With the title and IPFS video hash), list videos (by video IDs) to the blockchain.
 <br>
 Let's define the version of solidity and create a contract called DTube. Initially, we're saying that the video count is zero. `uint` means unsigned integer (Positive number) data type. `string` means char data type. We'll call this contract later on by the name "DTube". The state variable `public` doesn't have to do anything with security. `mapping(uint => Video) public videos` this is how the mapping is done in solidity, for multiple videos we're creating a variable `Videos` by using the data type of each element `Video` which we'll create in the next code snippet.
