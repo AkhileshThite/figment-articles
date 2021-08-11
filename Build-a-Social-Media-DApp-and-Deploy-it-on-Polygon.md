@@ -69,7 +69,7 @@ Now you'll notice zero balance (0 MATIC) in your wallet, To get test Matic for d
 <br>
 Matic Faucet [link](https://faucet.matic.network)
 <br>
-Done! check your wallet, you'll see some Matic there. *We only need small amount of Matic (5-10 Matic) to deploy and test the DApp*
+Done! check your wallet, you'll see some Matic there. *(We only need small amount of Matic (5-10 Matic) to deploy and test our DApp.)*
 <br>
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/128877273-327f6d3d-24a2-4637-8392-004a1f62048a.png" /></div>
 
@@ -118,6 +118,7 @@ Now, open the folder with your favorite IDE, I'm using VS Code.
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/128924693-5b541c00-b990-45f5-ada4-671e81a8ddc6.png" /></div>
 
 Install all the dependencies by the following command:
+<br>
 `npm install`
 <br>
 Note:- As the tutorial moves further, for each section you can clear the code from the file and code it by yourself. You can always cross-check your code from this tutorial or the original GitHub repository of the project.
@@ -180,4 +181,34 @@ Finally, we'll add the video to the contract by including `videoCount`,`_videoHa
     emit VideoUploaded(videoCount, _videoHash, _title, msg.sender);
   }
 }
+```
+
+## Truffle Migrations
+Path:`/src/contracts/`
+Path:`/migrations/`
+
+
+Whenever we create a DApp using truffle by the commands `truffle init` or `truffle unbox react`, truffle gives us boilerplate code to start building our DApp. It contains the following main files:
+
+`migrations/1_initial_migration.js`
+<br>
+`contracts/Migrations.sol (& DTube.sol)`
+<br>
+`test`
+<br>
+`truffle-config.js`
+<br>
+*We'll understand and see `truffle-config.js` at the time of deployment of our Smart Contracts.*
+
+
+**Migrations are JavaScript files that help you deploy contracts to the Ethereum network. These files are responsible for staging your deployment tasks, and they're written under the assumption that your deployment needs will change over time.**
+<br>
+Hence, to deploy our Smart Contracts to the Blockchain it is important to create a new file in the migrations folder called `2_initial_migration.js` which will talk to our `DTube.sol` contracts.
+
+```javascript
+const DTube = artifacts.require("DTube");
+
+module.exports = function(deployer) {
+  deployer.deploy(DTube);
+};
 ```
