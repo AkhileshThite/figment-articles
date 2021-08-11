@@ -1,6 +1,8 @@
 # Build a Social Media DApp & Deploy it on Polygon
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/128836864-2f40f55f-66fd-4f79-822f-883ad1d03106.png" /></div>
-<br>
+
+
+## Introduction
 In this tutorial, I'll show you how to Build a Social Media DApp (Decentralized Apllication) just like YouTube & how to Deploy it on Polygon (Matic) Mumbai Test Network.<br>
 I'll start the tutorial from scratch (MetaMask installation process to hosting the DApp on IPFS using Fleek).<br>
 So, grab a cup of coffee ☕️ and let's get started!
@@ -66,13 +68,13 @@ Done! check your wallet, you'll see some Matic there.
 
 ### Tech Stack:
 **Languages:** `Solidity, JavaScript, HTML5, CSS3`
-
+<br>
 **Libraries:** `React.js, Web3.js`
-
+<br>
 **Tools:** `IPFS`
-
+<br>
 **Network:** `Polygon (Matic)`
-
+<br>
 **Platforms:** `Ethereum, Fleek`
 
 ### Roadmap:
@@ -92,7 +94,12 @@ In this section, I introduced you to the basics of technology that we're going t
 ## Project Setup
 To build the DApp without dealing with any annoying version errors, we'll start building by installing all the necessary dependencies by cloning the GitHub repo.
 <br>
-Clone/download the GitHub repository from [here](https://github.com/AkhileshThite/DTube). Now, open the folder with your favorite IDE, I'm using VS Code.
+Clone/download the GitHub repository from [here](https://github.com/AkhileshThite/DTube).
+`git clone https://github.com/AkhileshThite/DTube.git`
+<br>
+`cd [repo_name]`
+<br>
+Now, open the folder with your favorite IDE, I'm using VS Code.
 
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/128924693-5b541c00-b990-45f5-ada4-671e81a8ddc6.png" /></div>
 
