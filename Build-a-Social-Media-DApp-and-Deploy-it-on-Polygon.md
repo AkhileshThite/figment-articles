@@ -96,7 +96,7 @@ To connect our Smart Contracts with fron-end we'll use **Web3.js** and then we'l
 In this section, I introduced you to the basics of technology that we're going to use and roadmap of our DApp, now the interesting part. Let's make our DApp!
 
 ## Project Setup
-To build the DApp without dealing with any annoying version errors, we'll start building by installing all the necessary dependencies by cloning the GitHub repo.
+To build the DApp without dealing with any annoying version errors & instead of installing each dependency one-by-one, we'll start building our DApp by installing all the necessary dependencies by cloning the GitHub repository.
 <br>
 Clone/download the GitHub repository from [here](https://github.com/AkhileshThite/DTube).
 <br>
@@ -116,4 +116,33 @@ Note:- As the tutorial moves further, for each section you can clear the code fr
 *I'll provide **path** and GitHub **repo link** on top of each section of the tutorial, so you don't need to scroll.*
 
 ## Writing Smart Contracts in Solidity
+Path:`/src/contracts/DTube.sol`
+### Data Structure:
+We are going to design Smart Contracts to upload videos (With IPFS video hash), Store videos (With the title and IPFS video hash), list videos (by video IDs) to the blockchain.
+<br>
+Let's define the version of solidity and create a contract called DTube. Initially we're saying that the video count is zero. `uint` means unsigned integer (Positive number) data type. `string` means char data type. We'll call this contract later on by the name "DTube". The state variable `public` doesn't have to do anything with sequrity.
+```solidity
+pragma solidity ^0.5.0;
 
+contract DTube {
+  uint public videoCount = 0;
+  string public name = "DTube";
+  mapping(uint => Video) public videos;
+```
+Now, let's create data types and event.
+```solidity
+// Create data types
+  struct Video {
+    uint id;    // video count
+    string hash; // IPFS video hash
+    string title; // Title of the video
+    address author; // User's wallet address
+  }
+// Create an event
+  event VideoUploaded(
+    uint id,
+    string hash,
+    string title,
+    address author
+  );
+```
