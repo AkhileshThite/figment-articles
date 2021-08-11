@@ -185,6 +185,7 @@ Finally, we'll add the video to the contract by including `videoCount`,`_videoHa
 
 ## Truffle Migrations
 Path:`/src/contracts/`
+<br>
 Path:`/migrations/`
 
 
@@ -198,12 +199,15 @@ Whenever we create a DApp using truffle by the commands `truffle init` or `truff
 <br>
 `truffle-config.js`
 <br>
-*We'll understand and see `truffle-config.js` at the time of deployment of our Smart Contracts.*
+*(We'll understand and see `truffle-config.js` at the time of deployment of our Smart Contracts.)*
 
 
 **Migrations are JavaScript files that help you deploy contracts to the Ethereum network. These files are responsible for staging your deployment tasks, and they're written under the assumption that your deployment needs will change over time.**
 <br>
 Hence, to deploy our Smart Contracts to the Blockchain it is important to create a new file in the migrations folder called `2_initial_migration.js` which will talk to our `DTube.sol` contracts.
+
+<div align="center"><img src="https://user-images.githubusercontent.com/68826419/129098791-50cf3734-1b9c-4391-bfab-1d7b08e20b1a.png" /></div>
+
 
 ```javascript
 const DTube = artifacts.require("DTube");
