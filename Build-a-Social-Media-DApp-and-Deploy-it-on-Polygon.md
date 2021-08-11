@@ -115,7 +115,7 @@ Clone/download the GitHub repository from [here](https://github.com/AkhileshThit
 <br>
 Now, open the folder with your favorite IDE, I'm using VS Code.
 
-<div align="center"><img src="https://user-images.githubusercontent.com/68826419/128924693-5b541c00-b990-45f5-ada4-671e81a8ddc6.png" /></div>
+<div align="center"><img src="https://user-images.githubusercontent.com/68826419/129099717-a0445e67-98d3-4269-a7e4-d11b92a356fa.png" /></div>
 
 Install all the dependencies by the following command:
 <br>
@@ -203,12 +203,15 @@ Whenever we create a DApp using truffle by the commands `truffle init` or `truff
 
 
 **Migrations are JavaScript files that help you deploy contracts to the Ethereum network. These files are responsible for staging your deployment tasks, and they're written under the assumption that your deployment needs will change over time.**
-<br>
+
+
 Hence, to deploy our Smart Contracts to the Blockchain it is important to create a new file in the migrations folder called `2_initial_migration.js` which will talk to our `DTube.sol` contracts.
 
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/129098791-50cf3734-1b9c-4391-bfab-1d7b08e20b1a.png" /></div>
 
-
+The code is similar to `1_initial_migration.js`, just replace migrations to DTube.
+<br>
+`2_initial_migration.js` will look like this:
 ```javascript
 const DTube = artifacts.require("DTube");
 
