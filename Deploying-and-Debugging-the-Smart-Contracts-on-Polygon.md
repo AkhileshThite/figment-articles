@@ -1,6 +1,7 @@
 # Deploying & Debugging the Smart Contracts on Polygon
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/128823287-bb88b2f1-5505-4f0a-aa0c-d67708d58546.png" /></div>
 <br>
+## Introduction
 In this tutorial, I'll show you how to deploy smart contracts of your DApp to the Polygon (Matic) Mumbai Test Network.
 I'll cover all the possible errors which I faced during the deployment.
 So, grab a cup of coffee ☕️ and follow the steps.
@@ -13,15 +14,15 @@ So, grab a cup of coffee ☕️ and follow the steps.
 ## About the Author
 I'm Akhilesh Thite, an Indian tech enthusiast with a passion for Software Development, Open-Source & Decentralization. Feel free to connect with me on [GitHub](https://github.com/AkhileshThite) & [Twitter](https://twitter.com/AkhileshThite_).
 
-## 1. MetaMask setup.
+## MetaMask setup.
 To deploy the smart contracts on Matic you first have to create a Matic network in MetaMask wallet.
 `Settings -> Networks -> Add network -> Save`
 <br>
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/128823596-49410c34-9244-42a2-ac3e-1ee3beff63f6.png" /></div>
-<br>
+
 To get test Matic for deployment and testing,
 <br>
-go to Matic Faucet -> Select Mumbai -> Paste wallet address -> Submit
+`go to Matic Faucet -> Select Mumbai -> Paste wallet address -> Submit`
 <br>
 Matic Faucet link: https://faucet.matic.network
 <br>
@@ -30,7 +31,7 @@ Done! check your wallet, you'll see some Matic there.
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/128877273-327f6d3d-24a2-4637-8392-004a1f62048a.png" /></div>
 
 
-## 2. truffle-config
+## truffle-config
 `truffle-config.js` for Mac users
 <br>
 `truffle.js` for Windows users
@@ -69,7 +70,7 @@ module.exports = {
   }
 }
 ```
-Make sure you create .env file in the root dir and paste mnemonics (12 secret words) of your MetaMask wallet with var MNEMONIC (give any name).
+Make sure you create `.env` file in the root dir and paste mnemonics (12 secret words) of your MetaMask wallet with var MNEMONIC (give any name).
 ```javascript
     matic: {
       provider: () => new HDWalletProvider(process.env.MNEMONIC, 
@@ -87,7 +88,7 @@ You can set gas price and gas limits for faster transactions by adding
       gasPrice: 10000000000,
 ```
 
-## 3. Deploy Smart Contracts
+## Deploy Smart Contracts
 Command: `truffle migrate --network matic`
 <br>
 If you're deploying it second time then deploy with this command just to **reset** and avoid json errors.<br>
@@ -130,7 +131,7 @@ Summary
 ```
 *Code snippet from matic truffle docs.*
 
-## 4. Dealing with different errors
+## Dealing with different errors
 If you get any of these errors then follow these steps
 
 ### Error:
