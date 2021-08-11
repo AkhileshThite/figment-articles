@@ -58,10 +58,14 @@ To deploy the smart contracts on Matic we first have to create a Matic network i
 Create a Matic network. Fill out the information as given in the image below.
 <br>
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/128823596-49410c34-9244-42a2-ac3e-1ee3beff63f6.png" /></div>
+
+
+Now you'll notice zero balance (0 MATIC) in your wallet, To get test Matic for deployment and testing,
 <br>
-Now you'll notice zero balance (0 MATIC) in your wallet, To get test Matic for deployment and testing,<br>
-go to Matic Faucet -> Select Mumbai -> Paste wallet address -> Submit<br>
-Matic Faucet link: https://faucet.matic.network <br>
+`go to Matic Faucet -> Select Mumbai -> Paste wallet address -> Submit`
+<br>
+Matic Faucet [link](https://faucet.matic.network)
+<br>
 Done! check your wallet, you'll see some Matic there.
 <br>
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/128877273-327f6d3d-24a2-4637-8392-004a1f62048a.png" /></div>
@@ -95,9 +99,10 @@ In this section, I introduced you to the basics of technology that we're going t
 To build the DApp without dealing with any annoying version errors, we'll start building by installing all the necessary dependencies by cloning the GitHub repo.
 <br>
 Clone/download the GitHub repository from [here](https://github.com/AkhileshThite/DTube).
-`git clone https://github.com/AkhileshThite/DTube.git`
 <br>
-`cd [repo_name]`
+`git clone https://github.com/AkhileshThite/DTube.git` this will copy the folder from git on your computer.
+<br>
+`cd [repo_name]` this will open that repo you just copied from GitHub.
 <br>
 Now, open the folder with your favorite IDE, I'm using VS Code.
 
