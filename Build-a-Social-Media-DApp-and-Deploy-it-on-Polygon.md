@@ -524,3 +524,35 @@ Now, we're going to create a form in video feed to choose the video file, input 
               &nbsp;
             </form>
 ```
+
+<div align="center"><img src="https://user-images.githubusercontent.com/68826419/129251544-45a37df2-18d4-4691-8225-12f423ce7cf9.png" /></div>
+
+Finally, to list out all the previously uploaded videos with their title in the video feed we'll create `video.hash` and `video.title` methods instead of `currentTitle` and `currentHash` methods.
+
+```javascript
+            { this.props.videos.map((video, key) => {
+              return(
+                  <div className="card mb-4 text-center hover-overlay bg-secondary mx-auto" style={{ width: '195px'}} key={key} >
+                    <div className="card-title bg-dark">
+                      <small className="text-white"><b>{video.title}</b></small>
+                    </div>
+                    <div>
+                      <p onClick={() => this.props.changeVideo(video.hash, video.title)}>
+                        <video
+                          src={`https://ipfs.infura.io/ipfs/${video.hash}`}
+                          style={{ width: '170px' }}
+                        />
+                      </p>
+                    </div>
+                  </div>
+              )
+            })}
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default Main;
+```
