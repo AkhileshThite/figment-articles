@@ -35,7 +35,6 @@ Done! check your wallet, you'll see some Matic there.
 <br>
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/128877273-327f6d3d-24a2-4637-8392-004a1f62048a.png" /></div>
 
-
 ## truffle-config
 `truffle-config.js` for Mac users
 <br>
@@ -44,7 +43,7 @@ Done! check your wallet, you'll see some Matic there.
 truffle-config file is the main and the most important file of your DApp which interacts with everything. In this file, you can mention the path of your solidity file (smart contracts), ABI's, and define **networks**.
 ```javascript
 const HDWalletProvider = require("@truffle/hdwallet-provider")
-require('dotenv').config(); //for MNEMONIC
+require('dotenv').config(); // Load .env file
 
 module.exports = {
   networks: {
@@ -56,15 +55,15 @@ module.exports = {
     },
     matic: {
       provider: () => new HDWalletProvider(process.env.MNEMONIC, 
-     `https://rpc-mumbai.maticvigil.com/v1/process.env.PROJECT_ID`),
+     `https://rpc-mumbai.matic.today`),
       network_id: 80001,
       confirmations: 2,
       timeoutBlocks: 200,
       skipDryRun: true,
     },
   },
-  contracts_directory: './src/contracts/',
-  contracts_build_directory: './src/abis/',
+  contracts_directory: './src/contracts/', // path to Smart Contracts
+  contracts_build_directory: './src/abis/', // Path to ABIs
   compilers: {
     solc: {
       optimizer: {
@@ -75,7 +74,11 @@ module.exports = {
   }
 }
 ```
-Make sure you create `.env` file in the root dir and paste mnemonics (12 secret words) of your MetaMask wallet with var MNEMONIC (give any name).
+Make sure you create `.env` file in the root dir and paste mnemonics (12 secret words) of your MetaMask wallet with variable name MNEMONIC (give any name).
+```.env
+MNEMONIC= 12 secret words here..
+```
+Now, let's add `matic` network in our truffle-config.
 ```javascript
     matic: {
       provider: () => new HDWalletProvider(process.env.MNEMONIC, 
