@@ -380,3 +380,30 @@ The bind() is an inbuilt method in React that is used to pass the data as an arg
     this.changeVideo = this.changeVideo.bind(this)
   }
 ```
+Finally, let's add all the components we imported at the top `<Navbar>`, `<Main>` & `<Footer>`. Remeber `this.state` is fetching all the blockchain data so that we can use that data to display in our react front-end components.
+<br>
+In `<Navbar>` we want to display the account address of the user, hence `<Navbar account={this.state.account} />` will fetch the current account address of the user and we'll display that in the `Navbar.js` component by `this.props.account`. Similarly for main content of our DApp we need videos, uploadVideo, captureFile, changeVideo, currentHash, currentTitle data to display it on `Main.js` component.
+```javascript
+  render() {
+    return (
+      <div>
+        <Navbar account={this.state.account} />
+        { this.state.loading
+          ? <div id="loader" className="text-center mt-5"><p>Loading...</p></div>
+          : <Main
+              videos={this.state.videos}
+              uploadVideo={this.uploadVideo}
+              captureFile={this.captureFile}
+              changeVideo={this.changeVideo}
+              currentHash={this.state.currentHash}
+              currentTitle={this.state.currentTitle}
+            />
+        }
+        <Footer />
+      </div>
+    );
+  }
+}
+
+export default App;
+```
