@@ -78,7 +78,7 @@ Make sure you create `.env` file in the root dir and paste mnemonics (12 secret 
 ```.env
 MNEMONIC= 12 secret words here..
 ```
-Now, let's add `matic` network in our truffle-config file which will contain environment variable MNEMONIC and RPC URL.
+Now, let's add `matic` network in our truffle-config file which will contain our environment variable MNEMONIC and RPC URL.
 ```javascript
     matic: {
       provider: () => new HDWalletProvider(process.env.MNEMONIC, 
