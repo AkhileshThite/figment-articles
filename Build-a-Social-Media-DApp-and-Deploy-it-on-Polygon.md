@@ -556,9 +556,10 @@ Finally, to list out all the previously uploaded videos with their title in the 
 
 export default Main;
 ```
-*The `<Footer>` component was created in bootstrap for hackathon purposes. It's not related to our DApp. You can simply modify that part as per your needs.*
-  
 You can run the react app by `npm start` command. But nothing is going to happen, because we haven't deployed our smart contracts to the blockchain yet. Let's deploy our Smart Contracts on Polygon (Matic) Network in the next section.
+
+
+*The `<Footer>` component was created in bootstrap for hackathon purposes. It's not related to our DApp. You can simply modify that part as per your needs.*
   
 ## Smart Contracts Deployment on Polygon (Matic)
 ### truffle-config
