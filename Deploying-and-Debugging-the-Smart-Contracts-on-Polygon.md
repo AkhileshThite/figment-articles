@@ -78,7 +78,7 @@ Make sure you create `.env` file in the root dir and paste mnemonics (12 secret 
 ```.env
 MNEMONIC= 12 secret words here..
 ```
-Now, let's add `matic` network in our truffle-config.
+Now, let's add `matic` network in our truffle-config file which will contain environment variable MNEMONIC and RPC URL.
 ```javascript
     matic: {
       provider: () => new HDWalletProvider(process.env.MNEMONIC, 
@@ -90,7 +90,7 @@ Now, let's add `matic` network in our truffle-config.
     },
   },
 ```
-You can set gas price and gas limits for faster transactions by adding
+You can set gas price and gas limits for faster transactions by adding,
 ```javascript
       gas: 6000000,
       gasPrice: 10000000000,
