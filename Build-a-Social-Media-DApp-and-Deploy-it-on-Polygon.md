@@ -125,7 +125,7 @@ Note:- As the tutorial moves further, for each section you can clear the code fr
 <br>
 *I'll provide **path** and GitHub **repo link** on top of each section of the tutorial, so you don't need to scroll.*
 
-## Writing Smart Contracts in Solidity
+## Smart Contracts in Solidity
 Path:`/src/contracts/DTube.sol`
 
 
@@ -220,4 +220,7 @@ module.exports = function(deployer) {
 };
 ```
 
-## Tests
+## Front-end with React.js
+Path: `/src/components/`
+<br>
+React applications are broken into components like for example navigation bar, main page, footer of the webpage. React loads a single HTML page (`/public/index.html`) which is connected with all the components. That's the reason everything loads so fast in react.
