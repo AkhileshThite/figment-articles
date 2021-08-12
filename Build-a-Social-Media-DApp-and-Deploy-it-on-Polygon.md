@@ -468,3 +468,31 @@ We're displaying the user address in this component by `this.props.account` meth
 ```
 
 ### Main.js
+
+<div align="center"><img src="https://user-images.githubusercontent.com/68826419/129247358-215c91c3-4031-4126-8a96-f7aba1aaff6d.png" /></div>
+
+To display current uploaded video & title of the video we're going to use `this.props.currentHash` & `this.props.currentTitle` methods. Now, why we're using `https://ipfs.infura.io/ipfs/` here? Well, Infura will pin our IPFS file to keep the file online, otherwise If the normal IPFS node is down then it'll cause some issues to access the video. There are so many IPFS pinning services are out there, Infura is the most common one.
+```javascript
+import React, { Component } from 'react';
+import './App.css';
+
+class Main extends Component {
+
+  render() {
+    return (
+      <div className="container-fluid text-monospace main">
+          <br></br>
+          &nbsp;
+          <br></br>
+          <div className="row">
+            <div className="col-md-10">
+              <div className="embed-responsive embed-responsive-16by9" style={{ maxHeight: '720px'}}>
+                <video
+                  src={`https://ipfs.infura.io/ipfs/${this.props.currentHash}`}
+                  controls
+                >
+                </video>
+              </div>
+            <h3 className="mt-3"><b><i className="video-title">{this.props.currentTitle}</i></b></h3>
+          </div>
+```
