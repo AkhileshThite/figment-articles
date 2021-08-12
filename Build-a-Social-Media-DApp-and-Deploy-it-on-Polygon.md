@@ -408,12 +408,10 @@ In `<Navbar>` we want to display the account address of the user, hence `<Navbar
 export default App;
 ```
 ### Navbar.js
-In Navbar, we're going to display brand logo, brand name (DTube), user account address, and user profile (with identicon JavaScript library).
 
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/129202762-33123c26-be53-471a-bd4a-f874bcbbd414.png" /></div>
 
-
-First, let's import the identicon.js and brand logo, we're going to use bootstrap navigation template.
+In Navbar, we're going to display brand logo, brand name (DTube), user account address, and user profile (with identicon JavaScript library). First, let's import the identicon.js and brand logo. We're going to use bootstrap to make our navigation bar.
 ```javascript
 import React, { Component } from 'react';
 import Identicon from 'identicon.js'; //user profile
@@ -456,7 +454,7 @@ class Navbar extends Component {
 
 export default Navbar;
 ```
-We're displaying the user address in this component by `this.props.account` method. The following code is saying that, If the user account exists then show the identicon user profile.
+We're displaying the user address in this component by `this.props.account` method. The following code is saying that, If the user account address exists, then show the identicon user profile.
 ```javascript
             { this.props.account
               ? <img
