@@ -315,3 +315,38 @@ React components has a built-in state object. The state object is where you stor
     }
   }
 ```
+
+Now we're going to prepare the file for upload to IPFS by `captureFile`.
+
+```javascript
+  captureFile = event => {
+    event.preventDefault()
+    const file = event.target.files[0]
+    const reader = new window.FileReader()
+    reader.readAsArrayBuffer(file)
+
+    reader.onloadend = () => {
+      this.setState({ buffer: Buffer(reader.result) })
+      console.log('buffer', this.state.buffer)
+    }
+  }
+```
+Let's upload the file to IPFS, while uploading a video file to IPFS it'll show a message in the console "Submitting file to IPFS...". Here, we're adding the file to IPFS with `ipfs.add()` function which will take two arguments -> file & callback. After that we're going to store the IPFS hash of the video file to the blockchain.
+```javascript
+  uploadVideo = title => {
+    console.log("Submitting file to IPFS...")
+    //adding file to the IPFS
+    ipfs.add(this.state.buffer, (error, result) => {
+      console.log('IPFS result', result)
+      if(error) {
+        console.error(error)
+        return
+      }
+
+      this.setState({ loading: true })
+      this.state.dtube.methods.uploadVideo(result[0].hash, title).send({ from: this.state.account }).on('transactionHash', (hash) => {
+        this.setState({ loading: false })
+      })
+    })
+  }
+```
