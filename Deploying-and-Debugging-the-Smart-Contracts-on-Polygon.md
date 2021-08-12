@@ -7,6 +7,9 @@ In this tutorial, I'll show you how to deploy smart contracts of your DApp to th
 I'll cover all the possible errors which I faced during the deployment.
 So, grab a cup of coffee ☕️ and follow the steps.
 
+## Prerequisites
+This tutorial assumes that you have some beginner-level experience in programming & blockchain understanding.
+
 ## After this tutorial you will be able to:
 • Deploy the smart contracts on polygon (Matic) Mumbai Test Network.
 <br>
@@ -220,3 +223,5 @@ Just add `networkCheckTimeout: 100000`
 *Truffle docs: https://www.trufflesuite.com/docs/truffle/overview*
 <br>
 *Polygon (Matic) docs: https://docs.matic.network/docs/develop/getting-started*
+<br>
+*GitHub repo: https://github.com/AkhileshThite/DTube*
