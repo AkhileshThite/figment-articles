@@ -380,7 +380,7 @@ The bind() is an inbuilt method in React that is used to pass the data as an arg
     this.changeVideo = this.changeVideo.bind(this)
   }
 ```
-Finally, let's add all the components we imported at the top `<Navbar>`, `<Main>` & `<Footer>`. Remeber `this.state` is fetching all the blockchain data so that we can use that data to display in our react front-end components.
+Finally, let's add all the components we imported at the top `<Navbar>`, `<Main>` & `<Footer>`. Remember `this.state` is fetching all the blockchain data so that we can use that data to display in our react front-end components.
 <br>
 In `<Navbar>` we want to display the account address of the user, hence `<Navbar account={this.state.account} />` will fetch the current account address of the user and we'll display that in the `Navbar.js` component by `this.props.account`. Similarly for main content of our DApp we need videos, uploadVideo, captureFile, changeVideo, currentHash, currentTitle data to display it on `Main.js` component.
 ```javascript
@@ -406,4 +406,65 @@ In `<Navbar>` we want to display the account address of the user, hence `<Navbar
 }
 
 export default App;
+```
+### Navbar.js
+In Navbar, we're going to display brand logo, brand name (DTube), user account address, and user profile (with identicon JavaScript library).
+
+<div align="center"><img src="https://user-images.githubusercontent.com/68826419/129202762-33123c26-be53-471a-bd4a-f874bcbbd414.png" /></div>
+
+
+First, let's import the identicon.js and brand logo, we're going to use bootstrap navigation template.
+```javascript
+import React, { Component } from 'react';
+import Identicon from 'identicon.js'; //user profile
+import dtube from '../dtube.png' //logo
+
+class Navbar extends Component {
+
+  render() {
+    return (
+      <nav className="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow text-monospace">
+        <a
+          className="navbar-brand ml-1 col-sm-3 col-md-2 mr-0"
+          href="/"
+          rel="noopener noreferrer"
+        >
+          <img src={dtube} width="30" height="30" className="d-inline-block align-top" alt="DTube logo" />
+          &nbsp;DTube
+        </a>
+        <ul className="navbar-nav px-3">
+          <li className="nav-item text-nowrap h5 d-none d-sm-none d-sm-block">
+            <small className="text-secondary">
+              <small id="account">{this.props.account}</small>
+            </small>
+            { this.props.account
+              ? <img
+                className='ml-2'
+                width='30'
+                height='30'
+                src={`data:image/png;base64,${new Identicon(this.props.account, 30).toString()}`}
+                alt="DTube account address"
+              />
+              : <span></span>
+            }
+          </li>
+        </ul>
+      </nav>
+    );
+  }
+}
+
+export default Navbar;
+```
+We're displaying the user address in this component by `this.props.account` method. The following code is saying that, If the user account exists then show the identicon user profile.
+```javascript
+            { this.props.account
+              ? <img
+                className='ml-2'
+                width='30'
+                height='30'
+                src={`data:image/png;base64,${new Identicon(this.props.account, 30).toString()}`}
+                alt="DTube account address"
+              />
+              : <span></span>
 ```
