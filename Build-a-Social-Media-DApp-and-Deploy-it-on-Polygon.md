@@ -471,7 +471,7 @@ We're displaying the user address in this component by `this.props.account` meth
 
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/129247358-215c91c3-4031-4126-8a96-f7aba1aaff6d.png" /></div>
 
-To display current uploaded video & title of the video we're going to use `this.props.currentHash` & `this.props.currentTitle` methods. Now, why we're using `https://ipfs.infura.io/ipfs/` here? Well, Infura will pin our IPFS file to keep the file online, otherwise If the normal IPFS node is down then it'll cause some issues to access the video. There are so many IPFS pinning services are out there, Infura is the most common one.
+To display the current uploaded video & title of the video we're going to use `this.props.currentHash` & `this.props.currentTitle` methods. Now, why we're using `https://ipfs.infura.io/ipfs/` here? Well, Infura will pin our IPFS file to keep the file online. Otherwise, If the normal IPFS node is down then it'll cause some issues to access the video. There are so many IPFS pinning services are out there, Infura is the most common one.
 ```javascript
 import React, { Component } from 'react';
 import './App.css';
@@ -495,4 +495,32 @@ class Main extends Component {
               </div>
             <h3 className="mt-3"><b><i className="video-title">{this.props.currentTitle}</i></b></h3>
           </div>
+```
+
+<div align="center"><img src="https://user-images.githubusercontent.com/68826419/129247706-5c15bb6f-3f27-42e6-8f67-40d8ee472929.png" /></div>
+
+Now, we're going to create a form in video feed to choose the video file, input title of the video, and upload the video.
+
+```javascript
+          <div className="vide-feed col-md-2 border border-secondary overflow-auto text-center" style={{ maxHeight: '4000px', minWidth: '175px' }}>
+            <h5 className="feed-title"><b>Video Feed 📺</b></h5>
+            <form onSubmit={(event) => {
+              event.preventDefault()
+              const title = this.videoTitle.value
+              this.props.uploadVideo(title)
+            }} >
+              &nbsp;
+              <input type='file' accept=".mp4, .mov, .mkv .ogg .wmv" onChange={this.props.captureFile} style={{ width: '250px' }} />
+                <div className="form-group mr-sm-2">
+                  <input
+                    id="videoTitle"
+                    type="text"
+                    ref={(input) => { this.videoTitle = input }}
+                    className="form-control-sm mt-3 mr-3"
+                    placeholder="Title.."
+                    required />
+                </div>
+              <button type="submit" className="btn border border-dark btn-primary btn-block btn-sm">Upload</button>
+              &nbsp;
+            </form>
 ```
