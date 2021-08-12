@@ -280,6 +280,8 @@ class App extends Component {
   }
 ```
 In `loadBlockchainData()` function, we're going to load the ETH accounts, connect with the network ID, list down the videos by the newest. If the smart contracts are not deployed to the respective network, then it'll show a pop up "DTube contract not deployed to detected network." message.
+<br>
+React components has a built-in state object. The state object is where you store property values that belongs to the component. When the state object changes, the component re-renders. We'll use `this.state` to fetch the blockchain data and display it in our front-end react components later with `this.props`.
 ```javascript
   async loadBlockchainData() {
     const web3 = window.web3
