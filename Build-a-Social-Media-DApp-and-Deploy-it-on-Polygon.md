@@ -354,7 +354,7 @@ Let's upload the file to IPFS by `uploadVideo` function. While uploading a video
     })
   }
 ```
-To update the video hash and title of the video we're going to create `changeVideo` function and pass currentHash and currentTitle. After that, let's create bind functions to display the blockchain data in our front-end react components.
+To update the video hash and title of the video to the "current" we're going to create `changeVideo` function. After that, let's create bind functions to display the blockchain data in our front-end react components.
 <br>
 The bind() is an inbuilt method in React that is used to pass the data as an argument to the function of a class based component.
 ```javascript
@@ -499,9 +499,9 @@ class Main extends Component {
 
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/129247706-5c15bb6f-3f27-42e6-8f67-40d8ee472929.png" /></div>
 
-Now, we're going to create a form in video feed to choose the video file, input title of the video, and to upload the video. First we're going to choose the video file, which will process to upload on IPFS with `this.props.captureFile` method. Then we're going to input the title of the video `ref={(input) => { this.videoTitle = input }}`.
+Now, we're going to create a form in the video feed to choose the video file, input the title of the video, and upload the video. First, we're going to choose the video file, which will process to upload on IPFS with `this.props.captureFile` method. Then we're going to input the title of the `video ref={(input) => { this.videoTitle = input }}`.
 <br>
-Finally, `onSubmit` event we'll upload the video file with the title of video by `this.props.uploadVideo(title)` method.
+Finally, onSubmit event we'll upload the video file with the title of the video by `this.props.uploadVideo(title)` method.
 
 ```javascript
           <div className="vide-feed col-md-2 border border-secondary overflow-auto text-center" style={{ maxHeight: '4000px', minWidth: '175px' }}>
@@ -529,7 +529,7 @@ Finally, `onSubmit` event we'll upload the video file with the title of video by
 
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/129251544-45a37df2-18d4-4691-8225-12f423ce7cf9.png" /></div>
 
-Finally, to list out all the previously uploaded videos with their title in the video feed we'll create `video.hash` and `video.title` methods instead of `currentTitle` and `currentHash` methods.
+Finally, to list out all the previously uploaded videos with their title in the video feed we'll create `video.hash` and `video.title`. Whenever we click on any listed/previous videos the `changeVideo` function will convert the `video.hash` and `video.title` to `currentHash` & `currentTitle`, so that the clicked/selected video will appear on the screen. 
 
 ```javascript
             { this.props.videos.map((video, key) => {
