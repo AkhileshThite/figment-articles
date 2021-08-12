@@ -97,7 +97,7 @@ You can set gas price and gas limits for faster transactions by adding
 Command: `truffle migrate --network matic`
 <br>
 If you're deploying it second time then deploy with this command just to **reset** and avoid json errors.<br>
-command: `truffle migrate --network matic --reset`
+Command: `truffle migrate --network matic --reset`
 <br>
 If everything worked fine, you'll see something like this:
 ```javascript
