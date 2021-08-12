@@ -10,6 +10,9 @@ So, grab a cup of coffee ☕️ and let's get started!
 
 *About this project: DTube was created by me during the ETHOdyssey Virtual Hackathon in July-Aug 2021. All the resources I used to create this DApp are linked at the bottom in "References" section.*
 
+## Prerequisites
+This tutorial assumes that you have some beginner-level experience programming in JavaScript, React.js, and Solidity.
+
 ## After this tutorial you will be able to:
 • Build a Full Stack Decentralized Apllication on top of Ethereum Blockchain.
 <br>
@@ -107,7 +110,7 @@ In this section, I introduced you to the basics of technology that we're going t
 ## Project Setup
 To build the DApp without dealing with any annoying version errors & instead of installing each dependency one-by-one, we'll start building our DApp by installing all the necessary dependencies by cloning the GitHub repository.
 <br>
-Clone/download the GitHub repository from [here](https://github.com/AkhileshThite/DTube).
+Clone/download the GitHub repository from https://github.com/AkhileshThite/DTube.
 <br>
 `git clone https://github.com/AkhileshThite/DTube.git` this command will copy the folder from git on your computer.
 <br>
