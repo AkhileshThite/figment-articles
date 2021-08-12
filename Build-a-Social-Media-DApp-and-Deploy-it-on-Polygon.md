@@ -499,9 +499,7 @@ class Main extends Component {
 
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/129247706-5c15bb6f-3f27-42e6-8f67-40d8ee472929.png" /></div>
 
-Now, we're going to create a form in the video feed to choose the video file, input the title of the video, and upload the video. First, we're going to choose the video file, which will process to upload on IPFS with `this.props.captureFile` method. Then we're going to input the title of the `video ref={(input) => { this.videoTitle = input }}`.
-<br>
-Finally, onSubmit event we'll upload the video file with the title of the video by `this.props.uploadVideo(title)` method.
+Now, we're going to create a form in the video feed to choose the video file, input the title of the video, and upload the video. First, we're going to choose the video file, which will process to upload on IPFS with `this.props.captureFile` method. Then we're going to input the title of the `video ref={(input) => { this.videoTitle = input }}`. onSubmit event we'll upload the video file with the title of the video by `this.props.uploadVideo(title)` method.
 
 ```javascript
           <div className="vide-feed col-md-2 border border-secondary overflow-auto text-center" style={{ maxHeight: '4000px', minWidth: '175px' }}>
@@ -529,7 +527,7 @@ Finally, onSubmit event we'll upload the video file with the title of the video 
 
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/129251544-45a37df2-18d4-4691-8225-12f423ce7cf9.png" /></div>
 
-Finally, to list out all the previously uploaded videos with their title in the video feed we'll create `video.hash` and `video.title`. Whenever we click on any listed/previous videos the `changeVideo` function will convert the `video.hash` and `video.title` to `currentHash` & `currentTitle`, so that the clicked/selected video will appear on the screen. 
+Finally, to list out all the previously uploaded videos with their title in the video feed we'll create `video.hash` and `video.title` methods. Whenever we click on any listed/previous videos the `changeVideo` function will convert the `video.hash` and `video.title` to `currentHash` & `currentTitle`, so that the clicked/selected video will appear on the screen. 
 
 ```javascript
             { this.props.videos.map((video, key) => {
@@ -558,3 +556,8 @@ Finally, to list out all the previously uploaded videos with their title in the 
 
 export default Main;
 ```
+*The `<Footer>` component was created in bootstrap for hackathon purposes. It's not related to our DApp. You can simply modify that part as per your needs.*
+  
+You can run the react app by `npm start` command. But nothing is going to happen, because we haven't deployed our smart contracts to the blockchain yet. Let's deploy our Smart Contracts on Polygon (Matic) Network in the next section.
+  
+## Smart Contracts Deployment on Polygon (Matic)
