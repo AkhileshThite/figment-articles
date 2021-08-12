@@ -604,7 +604,7 @@ Make sure you create `.env` file in the root dir and paste mnemonics (12 secret 
 ```.env
 MNEMONIC= 12 secret words here..
 ```
-Let's pass the mnemonics and matic rpc url in provider by `process.env.MNEMONIC` & `https://rpc-mumbai.matic.today`.
+Now, let's add `matic` network in our truffle-config file which will contain our environment variable MNEMONIC and RPC URL.
 ```javascript
     matic: {
       provider: () => new HDWalletProvider(process.env.MNEMONIC, 
@@ -665,4 +665,4 @@ Summary
 ```
 *Code snippet from matic truffle docs.*
 
-**If you are dealing with any errors while deploying the Smart Contracts to Polygon (Matic) then check out the "Dealing with different errors" section of [Deploying and Debugging the Smart Contracts on Polygon]() tutorial on Figment learn**
+**IMPORTANT:- If you are dealing with any errors while deploying the Smart Contracts to Polygon (Matic) then check out the "Dealing with different errors" section of [Deploying and Debugging the Smart Contracts on Polygon]() tutorial on Figment learn.**
