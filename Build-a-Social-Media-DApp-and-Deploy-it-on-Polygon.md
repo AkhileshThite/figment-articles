@@ -248,9 +248,6 @@ import './App.css';
 const ipfsClient = require('ipfs-http-client')
 const ipfs = ipfsClient({ host: 'ipfs.infura.io', port: 5001, protocol: 'https' })
 ```
-After that we're going to paste the exact default code which MetaMask instructs us to load web3. It takes Ethereum provider from MetaMask and injects it to your DApp, if your browser does not have MetaMask installed then it will show a pop up "Non-Ethereum browser detected. You should consider trying MetaMask!" message.
-
-
 About Async/Await Function in JavaScript:
 <br>
 **Async:**
@@ -259,7 +256,10 @@ It simply allows us to write promises based code as if it was synchronous and it
 **Await:**
 Await function is used to wait for the promise. It could be used within the async block only. It makes the code wait until the promise returns a result. It only makes the async block wait.
 
-You can find simple explanation of Async/Await Function [here](https://www.geeksforgeeks.org/async-await-function-in-javascript/).
+*You can find simple explanation of Async/Await function [here](https://www.geeksforgeeks.org/async-await-function-in-javascript/).*
+
+
+After that we're going to paste the exact default code which MetaMask instructs us to load web3. It takes Ethereum provider from MetaMask and injects it to your DApp, if your browser does not have MetaMask installed then it will show a pop up "Non-Ethereum browser detected. You should consider trying MetaMask!" message.
 
 ```javascript
 class App extends Component {
@@ -499,7 +499,9 @@ class Main extends Component {
 
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/129247706-5c15bb6f-3f27-42e6-8f67-40d8ee472929.png" /></div>
 
-Now, we're going to create a form in video feed to choose the video file, input title of the video, and upload the video.
+Now, we're going to create a form in video feed to choose the video file, input title of the video, and to upload the video. First we're going to choose the video file, which will process to upload on IPFS with `this.props.captureFile` method. Then we're going to input the title of the video `ref={(input) => { this.videoTitle = input }}`.
+<br>
+Finally, `onSubmit` event we'll upload the video file with the title of video by `this.props.uploadVideo(title)` method.
 
 ```javascript
           <div className="vide-feed col-md-2 border border-secondary overflow-auto text-center" style={{ maxHeight: '4000px', minWidth: '175px' }}>
