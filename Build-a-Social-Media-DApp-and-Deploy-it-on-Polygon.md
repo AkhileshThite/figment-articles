@@ -11,7 +11,7 @@ So, grab a cup of coffee ☕️ and let's get started!
 *About this project: DTube was created by me during the ETHOdyssey Virtual Hackathon in July-Aug 2021. All the resources I used to create this DApp are linked at the bottom in "References" section.*
 
 ## Prerequisites
-This tutorial assumes that you have some beginner-level experience programming in JavaScript, React.js, and Solidity.
+This tutorial assumes that you have some beginner-level experience in programming & blockchain understanding.
 
 ## After this tutorial you will be able to:
 • Build a Full Stack Decentralized Apllication on top of Ethereum Blockchain.
@@ -352,5 +352,31 @@ Let's upload the file to IPFS by `uploadVideo` function. While uploading a video
         this.setState({ loading: false })
       })
     })
+  }
+```
+To update the video hash and title of the video we're going to create `changeVideo` function and pass currentHash and currentTitle. After that, let's create bind functions to display the blockchain data in our front-end react components.
+<br>
+The bind() is an inbuilt method in React that is used to pass the data as an argument to the function of a class based component.
+```javascript
+  changeVideo = (hash, title) => {
+    this.setState({'currentHash': hash});
+    this.setState({'currentTitle': title});
+  }
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      buffer: null,
+      account: '',
+      dtube: null,
+      videos: [],
+      loading: true,
+      currentHash: null,
+      currentTitle: null
+    }
+
+    this.uploadVideo = this.uploadVideo.bind(this)
+    this.captureFile = this.captureFile.bind(this)
+    this.changeVideo = this.changeVideo.bind(this)
   }
 ```
