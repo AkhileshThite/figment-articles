@@ -157,7 +157,7 @@ Now, let's create `Video` data types and `VideoUploaded` event.
     address author
   );
 ```
-Let's create a `uploadVideo` function, inside the function we're making sure the `video hash`, `video title`, `uploader address` exists by using some conditions (length should be greater than zero). After that, to list down the videos we'll increase the video count (videoCount = videoCount + 1).
+Let's create a `uploadVideo` function with two arguments `_videoHash` and `_title`, inside the function we're making sure the `video hash`, `video title`, `uploader address` exists by using some conditions (length should be greater than zero). After that, to list down the videos we'll increase the video count (videoCount = videoCount + 1).
 ```solidity
   constructor() public {
   } 
@@ -222,5 +222,47 @@ module.exports = function(deployer) {
 
 ## Front-end with React.js
 Path: `/src/components/`
-<br>
+
+
 React applications are broken into components like for example navigation bar, main page, footer of the webpage. React loads a single HTML page (`/public/index.html`) which is connected with all the components. That's the reason everything loads so fast in react.
+
+<div align="center"><img src="https://user-images.githubusercontent.com/68826419/129173906-a0da9cb6-680d-4caf-b448-d4d57cef3755.png" /></div>
+
+Now let's work on our main `app.js` file which will contain all the components (navbar, main, footer).
+
+First, let's import all the components, Web3 and declare IPFS.
+```javascript
+import React, { Component } from 'react';
+import DTube from '../abis/DTube.json'
+import Navbar from './Navbar'
+import Main from './Main'
+import Footer from './Footer'
+import Web3 from 'web3';
+import './App.css';
+
+//Declare IPFS
+const ipfsClient = require('ipfs-http-client')
+const ipfs = ipfsClient({ host: 'ipfs.infura.io', port: 5001, protocol: 'https' })
+```
+After that we're going to paste the exact default code which MetaMask instructs us. It takes Ethereum provider from MetaMask and injects it to your DApp, if your browser does not have MetaMask installed then it will show a pop up of "Non-Ethereum browser detected. You should consider trying MetaMask!".
+```react
+class App extends Component {
+
+  async componentWillMount() {
+    await this.loadWeb3()
+    await this.loadBlockchainData()
+  }
+
+  async loadWeb3() {
+    if (window.ethereum) {
+      window.web3 = new Web3(window.ethereum)
+      await window.ethereum.enable()
+    }
+    else if (window.web3) {
+      window.web3 = new Web3(window.web3.currentProvider)
+    }
+    else {
+      window.alert('Non-Ethereum browser detected. You should consider trying MetaMask!')
+    }
+  }
+```
