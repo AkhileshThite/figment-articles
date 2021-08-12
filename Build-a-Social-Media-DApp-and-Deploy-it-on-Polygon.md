@@ -454,7 +454,7 @@ class Navbar extends Component {
 
 export default Navbar;
 ```
-We're displaying the user address in this component by `this.props.account` method. The following code is saying that, If the user account address exists, then show the identicon user profile.
+We're displaying the user address in this component by `this.props.account` method. The following code snippet says that, If the user account address exists, then show the identicon user profile.
 ```javascript
             { this.props.account
               ? <img
@@ -466,3 +466,5 @@ We're displaying the user address in this component by `this.props.account` meth
               />
               : <span></span>
 ```
+
+### Main.js
