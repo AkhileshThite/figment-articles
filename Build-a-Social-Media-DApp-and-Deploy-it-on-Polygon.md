@@ -245,6 +245,17 @@ const ipfsClient = require('ipfs-http-client')
 const ipfs = ipfsClient({ host: 'ipfs.infura.io', port: 5001, protocol: 'https' })
 ```
 After that we're going to paste the exact default code which MetaMask instructs us. It takes Ethereum provider from MetaMask and injects it to your DApp, if your browser does not have MetaMask installed then it will show a pop up of "Non-Ethereum browser detected. You should consider trying MetaMask!".
+<br>
+About Async/Await Function in JavaScript:
+<br>
+**Async:**
+It simply allows us to write promises based code as if it was synchronous and it checks that we are not breaking the execution thread. It operates asynchronously via the event-loop. Async functions will always return a value. It makes sure that a promise is returned and if it is not returned then javascript automatically wraps it in a promise which is resolved with its value.
+<br>
+**Await:**
+Await function is used to wait for the promise. It could be used within the async block only. It makes the code wait until the promise returns a result. It only makes the async block wait.
+
+There is much simple explanation of Async/Await Function [here](https://www.geeksforgeeks.org/async-await-function-in-javascript/).
+
 ```react
 class App extends Component {
 
