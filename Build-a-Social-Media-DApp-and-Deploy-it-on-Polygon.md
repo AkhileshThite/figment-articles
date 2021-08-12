@@ -131,7 +131,7 @@ Path:`/src/contracts/DTube.sol`
 
 We are going to design Smart Contracts to upload videos (With IPFS video hash), Store videos (With the title and IPFS video hash), list videos (by video IDs) to the blockchain.
 <br>
-Let's define the version of solidity and create a contract called DTube. Initially, we're saying that the video count is zero. `uint` means unsigned integer (Positive number) data type. `string` means char data type. We'll call this contract later on by the name "DTube". The state variable `public` doesn't have to do anything with security. `mapping(uint => Video) public videos` this is how the mapping is done in solidity, for multiple videos we're creating a variable `Videos` by using the data type of each element `Video` which we'll create in the next code snippet.
+Let's define the version of solidity and create a contract called DTube. Initially, we're saying that the video count is zero. `uint` means unsigned integer (Positive number) data type. `string` means char data type. We'll call this contract later on by the name "DTube" with the help of ABI. The state variable `public` doesn't have to do anything with security. `mapping(uint => Video) public videos` this is how the mapping is done in solidity, for multiple videos we're creating a variable `Videos` by using the data type of each element `Video` which we'll create in the next code snippet.
 ```solidity
 pragma solidity ^0.5.0;
 
@@ -228,6 +228,7 @@ React applications are broken into components like for example navigation bar, m
 
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/129173906-a0da9cb6-680d-4caf-b448-d4d57cef3755.png" /></div>
 
+### app.js
 Now let's work on our main `app.js` file which will contain all the components (navbar, main, footer).
 
 First, let's import all the components, Web3 and declare IPFS.
@@ -244,8 +245,9 @@ import './App.css';
 const ipfsClient = require('ipfs-http-client')
 const ipfs = ipfsClient({ host: 'ipfs.infura.io', port: 5001, protocol: 'https' })
 ```
-After that we're going to paste the exact default code which MetaMask instructs us. It takes Ethereum provider from MetaMask and injects it to your DApp, if your browser does not have MetaMask installed then it will show a pop up of "Non-Ethereum browser detected. You should consider trying MetaMask!".
-<br>
+After that we're going to paste the exact default code which MetaMask instructs us to load web3. It takes Ethereum provider from MetaMask and injects it to your DApp, if your browser does not have MetaMask installed then it will show a pop up "Non-Ethereum browser detected. You should consider trying MetaMask!" message.
+
+
 About Async/Await Function in JavaScript:
 <br>
 **Async:**
@@ -254,9 +256,9 @@ It simply allows us to write promises based code as if it was synchronous and it
 **Await:**
 Await function is used to wait for the promise. It could be used within the async block only. It makes the code wait until the promise returns a result. It only makes the async block wait.
 
-There is much simple explanation of Async/Await Function [here](https://www.geeksforgeeks.org/async-await-function-in-javascript/).
+You can find simple explanation of Async/Await Function [here](https://www.geeksforgeeks.org/async-await-function-in-javascript/).
 
-```react
+```javascript
 class App extends Component {
 
   async componentWillMount() {
@@ -274,6 +276,40 @@ class App extends Component {
     }
     else {
       window.alert('Non-Ethereum browser detected. You should consider trying MetaMask!')
+    }
+  }
+```
+In `loadBlockchainData()` function, we're going to load the ETH accounts, connect with the network ID, list down the videos by the newest. If the smart contracts are not deployed to the respective network, then it'll show a pop up "DTube contract not deployed to detected network." message.
+```javascript
+  async loadBlockchainData() {
+    const web3 = window.web3
+    // Load account
+    const accounts = await web3.eth.getAccounts()
+    this.setState({ account: accounts[0] })
+    // Network ID
+    const networkId = await web3.eth.net.getId()
+    const networkData = DTube.networks[networkId]
+    if(networkData) {
+      const dtube = new web3.eth.Contract(DTube.abi, networkData.address)
+      this.setState({ dtube })
+      const videosCount = await dtube.methods.videoCount().call()
+      this.setState({ videosCount })
+      // Load videos, sort by newest
+      for (var i=videosCount; i>=1; i--) {
+        const video = await dtube.methods.videos(i).call()
+        this.setState({
+          videos: [...this.state.videos, video]
+        })
+      }
+      //Set latest video with title to view as default 
+      const latest = await dtube.methods.videos(videosCount).call()
+      this.setState({
+        currentHash: latest.hash,
+        currentTitle: latest.title
+      })
+      this.setState({ loading: false})
+    } else {
+      window.alert('DTube contract not deployed to detected network.')
     }
   }
 ```
