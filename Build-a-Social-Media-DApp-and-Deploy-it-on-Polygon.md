@@ -667,3 +667,16 @@ Summary
 *Code snippet from matic truffle docs.*
 
 **IMPORTANT:- If you are dealing with any errors while deploying the Smart Contracts to Polygon (Matic) then check out the "Dealing with different errors" section of [Deploying and Debugging the Smart Contracts on Polygon]() tutorial on Figment learn.**
+
+
+let's run the react app on http://localhost:3000/ by `npm start` command.
+
+First, you'll see a MetaMask pop up to `connect` your MetaMask wallet.
+
+Now you can upload and share videos on your DApp which is deployed on polygon network. 
+
+But it's running on the localhost, to 
+
+
+## Host the DApp on IPFS using Fleek
+You cannot call this project a "Decentralized Application" if you are hosting it on any centralized server. To make it decentralized, again we're going to use IPFS. But the problem here is you cannot update/modify the project with the same IPFS hash. IPFS uses content based addressing, hence each asset has its own unique address. This is where we're going to use "Fleek" IPFS hosting and Filecoin storage platform where you can deploy the project, get a link, get SSL certificate, assign the domain, and update the project by simply connecting your GitHub repository. When you push any changes on that repo, fleek will automatically update the changes with new IPFS hash on same Fleek url. How cool is that? Let's see how it's done.
