@@ -97,7 +97,7 @@ You can set gas price and gas limits for faster transactions by adding,
 
 ## Deploy Smart Contracts
 * Command: `truffle migrate --network matic`<br>
-If you're deploying it second time then deploy with this command just to **reset** and avoid json errors.<br>
+If you're deploying it for the second time then deploy with this command just to **reset** and avoid JSON errors.<br>
 * Command: `truffle migrate --network matic --reset`
 
 If everything worked fine, you'll see something like this:
