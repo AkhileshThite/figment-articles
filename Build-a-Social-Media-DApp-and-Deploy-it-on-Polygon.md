@@ -78,7 +78,7 @@ We're going to use **IPFS** (InterPlanetary File System) to store the hashes of 
 To connect our Smart Contracts with fron-end we'll use **Web3.js** and then we'll deploy our Smart Contracts on **Polygon (Matic) Mumbai Test Network**. In the final step, we'll host this DApp on IPFS by using the **Fleek** platform.
 
 
-What are **Smart Contracts?**
+What are **Smart Contracts?**<br>
 Smart Contracts are peer-to-peer digital user agreements on the blockchain. To write Smart contracts in Ethereum we use solidity programming language.
 
 
@@ -670,5 +670,5 @@ That's it! you'll get the fleek link of your DApp after deploying the site, you 
 *Fleek docs: https://docs.fleek.co*<br>
 *IPFS docs: https://docs.ipfs.io/concepts/what-is-ipfs/#decentralization*<br>
 *Async/Await: https://www.geeksforgeeks.org/async-await-function-in-javascript/*<br>
-*Dapp University YouTube: https://www.youtube.com/watch?v=OLsteD3xkPQ*
+*Dapp University YouTube: https://www.youtube.com/watch?v=OLsteD3xkPQ*<br>
 *Deploy & debug on polygon :https://learn.figment.io/network-documentation/matic/tutorials/Deploying-and-Debugging-the-Smart-Contracts-on-Polygon*
