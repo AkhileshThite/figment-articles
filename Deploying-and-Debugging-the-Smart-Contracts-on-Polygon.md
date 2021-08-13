@@ -16,9 +16,9 @@ So, grab a cup of coffee ☕️ and follow the steps.
 This tutorial assumes that you have some beginner-level experience in programming & blockchain understanding.
 
 ## After this tutorial you will be able to:
-• Deploy the smart contracts on polygon (Matic) Mumbai Test Network.
-<br>
-• Tackle the errors while deploying the smart contracts on polygon (Matic) Mumbai Test Network.
+* Deploy the smart contracts on polygon (Matic) Mumbai Test Network.
+
+* Tackle the errors while deploying the smart contracts on polygon (Matic) Mumbai Test Network.
 
 ## About the Author
 I'm Akhilesh Thite, an Indian tech enthusiast with a passion for Software Development, Open-Source & Decentralization. Feel free to connect with me on [GitHub](https://github.com/AkhileshThite) & [Twitter](https://twitter.com/AkhileshThite_).
