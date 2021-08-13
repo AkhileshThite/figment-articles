@@ -1,3 +1,8 @@
+---
+description: >-
+  Learn how to deploy & debug the Smart Contracts on Polygon (Matic).
+---
+
 # Deploying & Debugging the Smart Contracts on Polygon
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/128823287-bb88b2f1-5505-4f0a-aa0c-d67708d58546.png" /></div>
 
