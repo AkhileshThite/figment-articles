@@ -671,8 +671,11 @@ Summary
 
 let's run the react app on http://localhost:3000/ by `npm start` command. First, you'll see a MetaMask pop up to `connect` your MetaMask wallet. Now you can upload and share videos on your DApp which is deployed on polygon network. 
 
-But it's running on the localhost, to 
-
+<div align="center"><img src="https://user-images.githubusercontent.com/68826419/129350977-c5fbe1dc-c971-469f-bbda-db8e2b16f1c6.gif" /></div>
 
 ## Host the DApp on IPFS using Fleek
 You cannot call this project a "Decentralized Application" if you are hosting it on any centralized server. To make it decentralized, again we're going to use IPFS. But the problem here is you cannot update/modify the project with same IPFS hash. IPFS uses content based addressing, hence each asset has its own unique address. This is where we're going to use "Fleek" IPFS hosting and Filecoin storage platform where you can **deploy the project, get a link, get SSL certificate, assign the domain, and update the project by simply connecting your GitHub repository**. When you push any changes on that repo, fleek will automatically update the changes with new IPFS hash on same Fleek url. How cool is that? Let's see how it's done.
+
+*`Sign up on [Fleek](https://fleek.co/) -> Add new site -> Connect GitHub repo -> select framework (React in our case) -> Deploy Site`*
+
+That's it! you'll get the fleek link of your DApp after deploying the site, you can assign a domain and share your DApp link with anyone in the world. Congratulations! You've built a truly Decentralized Social Media Application.
