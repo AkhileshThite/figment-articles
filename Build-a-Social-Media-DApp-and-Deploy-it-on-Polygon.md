@@ -691,15 +691,15 @@ That's it! you'll get the fleek link of your DApp after deploying the site, you 
 
 ## References
 
-*Truffle docs: https://www.trufflesuite.com/docs/truffle/overview*
-
+*Truffle docs: https://www.trufflesuite.com/docs/truffle/overview* <br>
 *Polygon (Matic) docs: https://docs.matic.network/docs/develop/getting-started* 
-
 *MetaMask docs: https://docs.metamask.io/guide/#why-metamask*
 
 *Web3 docs: https://web3js.readthedocs.io/en/v1.4.0/*
 
 *React docs: https://reactjs.org/docs/getting-started.html*
+
+*Fleek docs: https://docs.fleek.co*
 
 *IPFS docs: https://docs.ipfs.io/concepts/what-is-ipfs/#decentralization*
 
