@@ -4,7 +4,7 @@ description: >-
 ---
 
 # Deploying & Debugging the Smart Contracts on Polygon
-<div align="center"><img src="https://user-images.githubusercontent.com/68826419/128823287-bb88b2f1-5505-4f0a-aa0c-d67708d58546.png" /></div>
+<div align="center"><img src="../../../.gitbook/assets/deploy-and-debug-on-polygon.png" /></div>
 
 
 ## Introduction
@@ -25,15 +25,15 @@ I'm Akhilesh Thite, an Indian tech enthusiast with a passion for Software Develo
 ## MetaMask setup.
 To deploy the smart contracts on Matic you first have to create a Matic network in MetaMask wallet.
 `Settings -> Networks -> Add network -> Save`
-<br>
-<div align="center"><img src="https://user-images.githubusercontent.com/68826419/128823596-49410c34-9244-42a2-ac3e-1ee3beff63f6.png" /></div>
+
+<div align="center"><img src="../../../.gitbook/assets/deploy-and-debug-on-polygon-1.png" /></div>
 
 
 To get test Matic for deployment and testing,<br>
 `go to Matic Faucet -> Select Mumbai -> Paste wallet address -> Submit`, Matic Faucet [link](https://faucet.matic.network).<br>
 Done! check your wallet, you'll see some Matic there.
 
-<div align="center"><img src="https://user-images.githubusercontent.com/68826419/128877273-327f6d3d-24a2-4637-8392-004a1f62048a.png" /></div>
+<div align="center"><img src="../../../.gitbook/assets/deploy-and-debug-on-polygon-2.png" /></div>
 
 ## truffle-config
 * `truffle-config.js` for Mac users
