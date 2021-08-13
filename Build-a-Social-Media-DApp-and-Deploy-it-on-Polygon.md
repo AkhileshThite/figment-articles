@@ -676,6 +676,34 @@ let's run the react app on http://localhost:3000/ by `npm start` command. First,
 ## Host the DApp on IPFS using Fleek
 You cannot call this project a "Decentralized Application" if you are hosting it on any centralized server. To make it decentralized, again we're going to use IPFS. But the problem here is you cannot update/modify the project with same IPFS hash. IPFS uses content based addressing, hence each asset has its own unique address. This is where we're going to use "Fleek" IPFS hosting and Filecoin storage platform where you can **deploy the project, get a link, get SSL certificate, assign the domain, and update the project by simply connecting your GitHub repository**. When you push any changes on that repo, fleek will automatically update the changes with new IPFS hash on same Fleek url. How cool is that? Let's see how it's done.
 
-*`Sign up on [Fleek](https://fleek.co/) -> Add new site -> Connect GitHub repo -> select framework (React in our case) -> Deploy Site`*
+Before hosting the DApp on Fleek,
+Create `.gitignore` file in the root dir of your project, put `node_modules` and `.env` files inside `.gitignore` file.
+
+```.gitignore
+/node_modules
+.env
+```
+Create a new repository on GitHub and push all the changes.
+
+*`Sign up on `[Fleek](https://fleek.co/) `-> Add new site -> Connect GitHub repo -> select framework (React in our case) -> Deploy Site`*
 
 That's it! you'll get the fleek link of your DApp after deploying the site, you can assign a domain and share your DApp link with anyone in the world. Congratulations! You've built a truly Decentralized Social Media Application.
+
+## References
+
+*Truffle docs: https://www.trufflesuite.com/docs/truffle/overview*
+
+*Polygon (Matic) docs: https://docs.matic.network/docs/develop/getting-started* 
+
+*MetaMask docs: https://docs.metamask.io/guide/#why-metamask*
+
+*Web3 docs: https://web3js.readthedocs.io/en/v1.4.0/*
+
+*React docs: https://reactjs.org/docs/getting-started.html*
+
+*IPFS docs: https://docs.ipfs.io/concepts/what-is-ipfs/#decentralization*
+
+*Async/Await: https://www.geeksforgeeks.org/async-await-function-in-javascript/*
+
+*Dapp University YouTube: https://www.youtube.com/watch?v=OLsteD3xkPQ*
+
