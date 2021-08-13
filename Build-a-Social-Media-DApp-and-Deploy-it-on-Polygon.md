@@ -7,17 +7,17 @@ description: >-
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/128836864-2f40f55f-66fd-4f79-822f-883ad1d03106.png" /></div>
 
 ## Introduction
-In this tutorial, I'll show you how to Build a Social Media DApp (Decentralized Apllication) like YouTube & how to Deploy it on Polygon (Matic) Mumbai Test Network.<br>
+In this tutorial, I'll show you how to build a Social Media DApp (Decentralized Application) like YouTube & how to Deploy it on Polygon (Matic) Mumbai Test Network.<br>
 I'll start the tutorial from scratch (MetaMask installation process to hosting the DApp on IPFS using Fleek).<br>
 So, grab a cup of coffee ☕️ and let's get started!
 
-*About this project: DTube was created by me during the ETHOdyssey Virtual Hackathon in July-Aug 2021. All the resources I used to create this DApp are linked at the bottom in "References" section.*
+*About this project: DTube was created by me during the ETHOdyssey Virtual Hackathon in July-Aug 2021. All the resources I used to create this DApp are linked at the bottom in the "References" section.*
 
 ## Prerequisites
 This tutorial assumes that you have some beginner-level experience in programming & blockchain understanding.
 
 ## After this tutorial you will be able to:
-* Build a Full Stack Decentralized Apllication on top of Ethereum Blockchain.
+* Build a Full Stack Decentralized Application on top of Ethereum Blockchain.
 * Deploy the smart contracts on polygon (Matic) Mumbai Test Network.
 * Use truffle & MetaMask effectively.
 *  Understand Web3 concepts.
@@ -43,7 +43,7 @@ To install truffle open your `windows cmd prompt` or `mac terminal` and paste th
 ### Ganache (Optional for this tutorial):
 <img height="150" width="150" align="left" src="https://user-images.githubusercontent.com/68826419/128867841-498dc62c-a8fd-47ee-818d-4cc6c9cc2382.png" />Ganache is a personal blockchain environment for DApp development. It provides us 10 ETH accounts, each of them is funded with 100 ETH so you don't have to worry about anything. <br>
 But in this tutorial, we will deploy our smart contracts on Polygon (Matic).<br>
-If you're looking to develop your own DApp then Ganache is the powerful tool. You can download Ganache from this [link](https://www.trufflesuite.com/ganache)
+If you're looking to develop your own DApp then Ganache is a powerful tool. You can download Ganache from this [link](https://www.trufflesuite.com/ganache)
 
 <br><br>
 ### MetaMask Setup:
@@ -75,7 +75,7 @@ After writing Smart Contracts, To build the front-end of our DApp we'll use **Re
 
 We're going to use **IPFS** (InterPlanetary File System) to store the hashes of our videos to the blockchain and later we'll be able to play those videos by calling those video hashes.
 
-To connect our Smart Contracts with fron-end we'll use **Web3.js** and then we'll deploy our Smart Contracts on **Polygon (Matic) Mumbai Test Network**. In the final step, we'll host this DApp on IPFS by using the **Fleek** platform.
+To connect our Smart Contracts with front-end we'll use **Web3.js** and then we'll deploy our Smart Contracts on **Polygon (Matic) Mumbai Test Network**. In the final step, we'll host this DApp on IPFS by using the **Fleek** platform.
 
 
 What are **Smart Contracts?**<br>
@@ -83,7 +83,7 @@ Smart Contracts are peer-to-peer digital user agreements on the blockchain. To w
 
 
 What is **Web3.js?**<br>
-Web3.js is a set of JavaScript libraries that acts like a port to the blockchain world. Web3 is a medium to connect our Smart Contracts to the front-end of the DApp.
+Web3.js is a set of JavaScript libraries that acts as a port to the blockchain world. Web3 is a medium to connect our Smart Contracts to the front-end of the DApp.
 
 In this section, I introduced you to the basics of technology that we're going to use and roadmap of our DApp, now the interesting part. Let's make our DApp!
 
@@ -102,7 +102,7 @@ Install all the dependencies by the following command:<br>
 
 Note:- As the tutorial moves further, for each section you can clear the code from the file and code it by yourself. You can always cross-check your code from this tutorial or the original GitHub repository of the project.
 
-*I'll provide **path** and GitHub **repo link** on top of each section of the tutorial, so you don't need to scroll.*
+*I'll provide a **path** and GitHub **repo link** on top of each section of the tutorial, so you don't need to scroll.*
 
 ## Smart Contracts in Solidity
 Path:`/src/contracts/DTube.sol`
@@ -152,7 +152,7 @@ Let's create a `uploadVideo` function with two arguments `_videoHash` and `_titl
     // Increment video id
     videoCount ++;
 ```
-Finally, we'll add the video to the contract by including `videoCount`,`_videoHash`, `_title`, `msg.sender`(which is global variable in solidity, it simply means the current user) variables. Then we'll create a function `VideoUploaded` to trigger the event.
+Finally, we'll add the video to the contract by including `videoCount`,`_videoHash`, `_title`, `msg.sender`(which is a global variable in solidity, it simply means the current user) variables. Then we'll create a function `VideoUploaded` to trigger the event.
 ```solidity
     // Add video to the contract
     videos[videoCount] = Video(videoCount, _videoHash, _title, msg.sender);
@@ -303,7 +303,7 @@ Now we're going to prepare the file for upload to IPFS by `captureFile` function
     }
   }
 ```
-Let's upload the file to IPFS by `uploadVideo` function. While uploading a video file to IPFS it'll show a message in the console "Submitting file to IPFS...". Here, we're adding the file to IPFS with `ipfs.add()` function which will take two arguments -> file & callback. After that we're going to store the IPFS hash of the video file to the blockchain.
+Let's upload the file to IPFS by `uploadVideo` function. While uploading a video file to IPFS it'll show a message in the console "Submitting file to IPFS...". Here, we're adding the file to IPFS with `ipfs.add()` function which will take two arguments -> file & callback. After that, we're going to store the IPFS hash of the video file to the blockchain.
 ```javascript
   uploadVideo = title => {
     console.log("Submitting file to IPFS...")
@@ -351,7 +351,7 @@ The bind() is an inbuilt method in React that is used to pass the data as an arg
 ```
 Finally, let's add all the components we imported at the top `<Navbar>`, `<Main>` & `<Footer>`. Remember `this.state` is fetching all the blockchain data so that we can use that data to display in our react front-end components.
 
-In `<Navbar>` we want to display the account address of the user, hence `<Navbar account={this.state.account} />` will fetch the current account address of the user and we'll display that in the `Navbar.js` component by `this.props.account`. Similarly for main content of our DApp we need videos, uploadVideo, captureFile, changeVideo, currentHash, currentTitle data to display it on `Main.js` component.
+In `<Navbar>` we want to display the account address of the user, hence `<Navbar account={this.state.account} />` will fetch the current account address of the user and we'll display that in the `Navbar.js` component by `this.props.account`. Similarly for the main content of our DApp we need videos, uploadVideo, captureFile, changeVideo, currentHash, currentTitle data to display it on `Main.js` component.
 ```javascript
   render() {
     return (
@@ -380,7 +380,7 @@ export default App;
 
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/129202762-33123c26-be53-471a-bd4a-f874bcbbd414.png" /></div>
 
-In Navbar, we're going to display brand logo, brand name (DTube), user account address, and user profile (with identicon JavaScript library). First, let's import the identicon.js and brand logo. We're going to use bootstrap to make our navigation bar.
+In Navbar, we're going to display the brand logo, brand name (DTube), user account address, and user profile (with identicon JavaScript library). First, let's import the identicon.js and brand logo. We're going to use bootstrap to make our navigation bar.
 ```javascript
 import React, { Component } from 'react';
 import Identicon from 'identicon.js'; //user profile
@@ -585,7 +585,7 @@ Now, let's add `matic` network in our truffle-config file which will contain our
     },
   },
 ```
-You can set gas price and gas limits for faster transactions by adding
+You can set the gas price and gas limits for faster transactions by adding
 ```javascript
       gas: 6000000,
       gasPrice: 10000000000,
@@ -593,7 +593,7 @@ You can set gas price and gas limits for faster transactions by adding
 
 ### Deploy Smart Contracts
 * Command: `truffle migrate --network matic`<br>
-If you're deploying it second time then deploy with this command just to **reset** and avoid json errors.<br>
+If you're deploying it for the second time then deploy with this command just to **reset** and avoid JSON errors.<br>
 * Command: `truffle migrate --network matic --reset`
 
 If everything worked fine, you'll see something like this:
@@ -641,7 +641,7 @@ let's run the react app on http://localhost:3000/ by `npm start` command. First,
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/129350977-c5fbe1dc-c971-469f-bbda-db8e2b16f1c6.gif" /></div>
 
 ## Host the DApp on IPFS using Fleek
-You cannot call this project a "Decentralized Application" if you are hosting it on any centralized server. To make it decentralized, again we're going to use IPFS. But the problem here is you cannot update/modify the project with same IPFS hash. IPFS uses content based addressing, hence each asset has its own unique address. This is where we're going to use "Fleek" IPFS hosting and Filecoin storage platform where you can **deploy the project, get a link, get SSL certificate, assign the domain, and update the project by simply connecting your GitHub repository**. When you push any changes on that repo, fleek will automatically update the changes with new IPFS hash on same Fleek url. How cool is that? Let's see how it's done.
+You cannot call this project a "Decentralized Application" if you are hosting it on any centralized server. To make it decentralized, again we're going to use IPFS. But the problem here is you cannot update/modify the project with same IPFS hash. IPFS uses content based addressing, hence each asset has its own unique address. This is where we're going to use "Fleek" IPFS hosting and Filecoin storage platform where you can **deploy the project, get a link, get SSL certificate, assign the domain, and update the project by simply connecting your GitHub repository**. When you push any changes on that repo, fleek will automatically update the changes with new IPFS hash on the same Fleek url. How cool is that? Let's see how it's done.
 
 Before hosting the DApp on Fleek,
 Create `.gitignore` file in the root dir of your project, put `node_modules` and `.env` files inside `.gitignore` file.
