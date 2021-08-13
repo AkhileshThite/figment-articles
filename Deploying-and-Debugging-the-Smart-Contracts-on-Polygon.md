@@ -16,8 +16,7 @@ So, grab a cup of coffee ☕️ and follow the steps.
 This tutorial assumes that you have some beginner-level experience in programming & blockchain understanding.
 
 ## After this tutorial you will be able to:
-* Deploy the smart contracts on polygon (Matic) Mumbai Test Network.
-
+* Deploy the smart contracts on polygon (Matic) Mumbai Test Network.<br>
 * Tackle the errors while deploying the smart contracts on polygon (Matic) Mumbai Test Network.
 
 ## About the Author
@@ -30,21 +29,16 @@ To deploy the smart contracts on Matic you first have to create a Matic network 
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/128823596-49410c34-9244-42a2-ac3e-1ee3beff63f6.png" /></div>
 
 
-To get test Matic for deployment and testing,
-<br>
-`go to Matic Faucet -> Select Mumbai -> Paste wallet address -> Submit`
-<br>
-Matic Faucet [link](https://faucet.matic.network)
-<br>
+To get test Matic for deployment and testing,<br>
+`go to Matic Faucet -> Select Mumbai -> Paste wallet address -> Submit` Matic Faucet [link](https://faucet.matic.network).<br>
 Done! check your wallet, you'll see some Matic there.
-<br>
+
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/128877273-327f6d3d-24a2-4637-8392-004a1f62048a.png" /></div>
 
 ## truffle-config
-`truffle-config.js` for Mac users
-<br>
-`truffle.js` for Windows users
-<br>
+* `truffle-config.js` for Mac users
+* `truffle.js` for Windows users
+
 truffle-config file is the main and the most important file of your DApp which interacts with everything. In this file, you can mention the path of your solidity file (smart contracts), ABI's, and define **networks**.
 ```javascript
 const HDWalletProvider = require("@truffle/hdwallet-provider")
@@ -102,11 +96,10 @@ You can set gas price and gas limits for faster transactions by adding,
 ```
 
 ## Deploy Smart Contracts
-Command: `truffle migrate --network matic`
-<br>
+* Command: `truffle migrate --network matic`<br>
 If you're deploying it second time then deploy with this command just to **reset** and avoid json errors.<br>
-Command: `truffle migrate --network matic --reset`
-<br>
+* Command: `truffle migrate --network matic --reset`
+
 If everything worked fine, you'll see something like this:
 ```javascript
 2_deploy_contracts.js
@@ -168,7 +161,7 @@ Change `https://rpc-mumbai.matic.today` by using [Infura custom RPC](https://inf
   },
 ```
 Paste your PROJECT_ID there from .env file.
-<br>
+
 `truffle migrate --network matic --reset`
 
 If still dealing with error, try this 2nd fix.
@@ -188,7 +181,7 @@ Change `https://rpc-mumbai.matic.today` by using [Matic custom RPC](https://rpc.
   },
 ```
 Paste your PROJECT_ID there from .env file.
-<br>
+
 `truffle migrate --network matic --reset`
 
 ### Error:
@@ -200,7 +193,7 @@ Paste your PROJECT_ID there from .env file.
 
 ### Fix:
 `npm install @truffle/hdwallet-provider@1.4.0`
-<br>
+
 Truffle hdwallet-provider version 1.4.0 will fix this error.
 
 ### Error:
@@ -228,8 +221,6 @@ Just add `networkCheckTimeout: 100000`
 *If you discover any new errors and If you know the solution for it, then feel free to make a PR, we'll add your Error-Fix here.*
 
 ## References
-*Truffle docs: https://www.trufflesuite.com/docs/truffle/overview*
-<br>
-*Polygon (Matic) docs: https://docs.matic.network/docs/develop/getting-started*
-<br>
+*Truffle docs: https://www.trufflesuite.com/docs/truffle/overview*<br>
+*Polygon (Matic) docs: https://docs.matic.network/docs/develop/getting-started*<br>
 *GitHub repo: https://github.com/AkhileshThite/DTube*
