@@ -629,11 +629,10 @@ You can set gas price and gas limits for faster transactions by adding
 ```
 
 ### Deploy Smart Contracts
-Command: `truffle migrate --network matic`
-<br>
+* Command: `truffle migrate --network matic`
 If you're deploying it second time then deploy with this command just to **reset** and avoid json errors.<br>
-Command: `truffle migrate --network matic --reset`
-<br>
+* Command: `truffle migrate --network matic --reset`
+
 If everything worked fine, you'll see something like this:
 ```javascript
 2_deploy_contracts.js
@@ -684,6 +683,10 @@ You cannot call this project a "Decentralized Application" if you are hosting it
 Before hosting the DApp on Fleek,
 Create `.gitignore` file in the root dir of your project, put `node_modules` and `.env` files inside `.gitignore` file.
 
+{% hint style="warning" %}
+Never share or commit your `.env` file. It contains your credentials like `mnemonics` and `API` key. Therefore, it is advised to add `.env` to your `.gitignore` file.
+{% endhint %}
+
 ```.gitignore
 /node_modules
 .env
@@ -696,19 +699,13 @@ That's it! you'll get the fleek link of your DApp after deploying the site, you 
 
 ## References
 
-*Truffle docs: https://www.trufflesuite.com/docs/truffle/overview* <br>
-*Polygon (Matic) docs: https://docs.matic.network/docs/develop/getting-started* 
-*MetaMask docs: https://docs.metamask.io/guide/#why-metamask*
-
-*Web3 docs: https://web3js.readthedocs.io/en/v1.4.0/*
-
-*React docs: https://reactjs.org/docs/getting-started.html*
-
-*Fleek docs: https://docs.fleek.co*
-
-*IPFS docs: https://docs.ipfs.io/concepts/what-is-ipfs/#decentralization*
-
-*Async/Await: https://www.geeksforgeeks.org/async-await-function-in-javascript/*
-
+*Truffle docs: https://www.trufflesuite.com/docs/truffle/overview*<br>
+*Polygon (Matic) docs: https://docs.matic.network/docs/develop/getting-started*<br>
+*MetaMask docs: https://docs.metamask.io/guide/#why-metamask*<br>
+*Web3 docs: https://web3js.readthedocs.io/en/v1.4.0/*<br>
+*React docs: https://reactjs.org/docs/getting-started.html*<br>
+*Fleek docs: https://docs.fleek.co*<br>
+*IPFS docs: https://docs.ipfs.io/concepts/what-is-ipfs/#decentralization*<br>
+*Async/Await: https://www.geeksforgeeks.org/async-await-function-in-javascript/*<br>
 *Dapp University YouTube: https://www.youtube.com/watch?v=OLsteD3xkPQ*
 
