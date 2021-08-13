@@ -4,7 +4,7 @@ description: >-
 ---
 
 # Build a Social Media DApp & Deploy it on Polygon
-<div align="center"><img src="https://user-images.githubusercontent.com/68826419/128836864-2f40f55f-66fd-4f79-822f-883ad1d03106.png" /></div>
+<div align="center"><img src="../../../.gitbook/assets/dtube.png" /></div>
 
 ## Introduction
 In this tutorial, I'll show you how to build a Social Media DApp (Decentralized Application) like YouTube & how to Deploy it on Polygon (Matic) Mumbai Test Network.<br>
@@ -29,38 +29,37 @@ I'm Akhilesh Thite, an Indian tech enthusiast with a passion for Software Develo
 ## Basics & Installation
 We need the following things on your computer to build our DApp.
 ### Node & npm:
-<img height="140" width="140" align="left" src="https://user-images.githubusercontent.com/68826419/128867676-c789b537-9881-49cc-a044-32b672f99680.png" /> Node is a JavaScript runtime environment that executes JavaScript code outside a web browser and npm is a JavaScript package installer.<br>
+<div height="140" width="140" align="left"><img src="../../../.gitbook/assets/dtube-1.png" /></div> Node is a JavaScript runtime environment that executes JavaScript code outside a web browser and npm is a JavaScript package installer.<br>
 To install Node.js & npm on your computer, click on this [link](https://nodejs.org/en/download/) -> download the file as per your computer requirement -> Install the file.<br>
 To check the successful installation type `npm -v` in cmd prompt or terminal, It'll show the version that means you've successfully installed it on your computer.
 
 <br><br>
 ### Truffle:
-<img height="150" width="150" align="left" src="https://user-images.githubusercontent.com/68826419/128867776-82b05234-7301-443a-9784-388ba7e3638e.png" />Truffle is the best development environment for developing blockchain applications. Truffle gives us boilerplate code (template code) to start building our DApp.<br>
+<div height="140" width="140" align="left"><img src="../../../.gitbook/assets/dtube-2.png" /></div> Truffle is the best development environment for developing blockchain applications. Truffle gives us boilerplate code (template code) to start building our DApp.<br>
 To install truffle open your `windows cmd prompt` or `mac terminal` and paste the following command.<br>
 `npm install -g truffle`
 
 <br><br>
 ### Ganache (Optional for this tutorial):
-<img height="150" width="150" align="left" src="https://user-images.githubusercontent.com/68826419/128867841-498dc62c-a8fd-47ee-818d-4cc6c9cc2382.png" />Ganache is a personal blockchain environment for DApp development. It provides us 10 ETH accounts, each of them is funded with 100 ETH so you don't have to worry about anything. <br>
+<div height="140" width="140" align="left"><img src="../../../.gitbook/assets/dtube-3.png" /></div> Ganache is a personal blockchain environment for DApp development. It provides us 10 ETH accounts, each of them is funded with 100 ETH so you don't have to worry about anything. <br>
 But in this tutorial, we will deploy our smart contracts on Polygon (Matic).<br>
 If you're looking to develop your own DApp then Ganache is a powerful tool. You can download Ganache from this [link](https://www.trufflesuite.com/ganache)
 
 <br><br>
 ### MetaMask Setup:
-<img height="150" width="150" align="left" src="https://user-images.githubusercontent.com/68826419/128867893-60b76424-ba7b-4d12-bf0a-e42aacb46fca.png" />MetaMask is used to interact with the Ethereum blockchain. It allows users to access their Ethereum wallet through a browser extension or mobile app, which can then be used to interact with decentralized applications.<br>
+<div height="140" width="140" align="left"><img src="../../../.gitbook/assets/dtube-4.png" /></div> MetaMask is used to interact with the Ethereum blockchain. It allows users to access their Ethereum wallet through a browser extension or mobile app, which can then be used to interact with decentralized applications.<br>
 To install MetaMask extension, click on this [link](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en).<br>
 Now, `Create a MetaMask account -> save the mnemonics (12 secret words) because we need those mnemonics at the time of deployment`<br>
 To deploy the smart contracts on Matic we first have to create a Matic network in MetaMask wallet. `Settings -> Networks -> Add network -> Save`<br>
 Create a Matic network. Fill out the information as given in the image below.
 
-<div align="center"><img src="https://user-images.githubusercontent.com/68826419/128823596-49410c34-9244-42a2-ac3e-1ee3beff63f6.png" /></div>
-
+<div align="center"><img src="../../../.gitbook/assets/deploy-and-debug-on-polygon-1.png" /></div>
 
 Now you'll notice zero balance (0 MATIC) in your wallet, To get test Matic for deployment and testing,<br>
 `go to Matic Faucet -> Select Mumbai -> Paste wallet address -> Submit`, Matic Faucet [link](https://faucet.matic.network).<br>
 Done! check your wallet, you'll see some Matic there. *(We only need small amount of Matic (5-10 Matic) to deploy and test our DApp.)*
 
-<div align="center"><img src="https://user-images.githubusercontent.com/68826419/128877273-327f6d3d-24a2-4637-8392-004a1f62048a.png" /></div>
+<div align="center"><img src="../../../.gitbook/assets/deploy-and-debug-on-polygon-2.png" /></div>
 
 ### Tech Stack:
 **Languages:** `Solidity, JavaScript, HTML5, CSS3`<br>
@@ -95,7 +94,7 @@ Clone/download the GitHub repository from https://github.com/AkhileshThite/DTube
 `cd [repo_name]` this command will open that repo you just copied from GitHub.<br>
 Now, open the folder with your favorite IDE, I'm using VS Code.
 
-<div align="center"><img src="https://user-images.githubusercontent.com/68826419/129099717-a0445e67-98d3-4269-a7e4-d11b92a356fa.png" /></div>
+<div align="center"><img src="../../../.gitbook/assets/dtube-5.png" /></div>
 
 Install all the dependencies by the following command:<br>
 `npm install`
@@ -180,7 +179,7 @@ Whenever we create a DApp using truffle by the commands `truffle init` or `truff
 
 Hence, to deploy our Smart Contracts to the Blockchain it is important to create a new file in the migrations folder called `2_initial_migration.js` which will talk to our `DTube.sol` contracts.
 
-<div align="center"><img src="https://user-images.githubusercontent.com/68826419/129098791-50cf3734-1b9c-4391-bfab-1d7b08e20b1a.png" /></div>
+<div align="center"><img src="../../../.gitbook/assets/dtube-6.png" /></div>
 
 The code is similar to `1_initial_migration.js`, just replace migrations with DTube.
 
@@ -199,7 +198,7 @@ Path: `/src/components/`
 
 React applications are broken into components like for example navigation bar, main page, footer of the webpage. React loads a single HTML page (`/public/index.html`) which is connected with all the components. That's the reason everything loads so fast in react.
 
-<div align="center"><img src="https://user-images.githubusercontent.com/68826419/129173906-a0da9cb6-680d-4caf-b448-d4d57cef3755.png" /></div>
+<div align="center"><img src="../../../.gitbook/assets/dtube-7.png" /></div>
 
 ### app.js
 Now let's work on our main `app.js` file which will contain all the components (navbar, main, footer).
@@ -378,7 +377,7 @@ export default App;
 ```
 ### Navbar.js
 
-<div align="center"><img src="https://user-images.githubusercontent.com/68826419/129202762-33123c26-be53-471a-bd4a-f874bcbbd414.png" /></div>
+<div align="center"><img src="../../../.gitbook/assets/dtube-8.png" /></div>
 
 In Navbar, we're going to display the brand logo, brand name (DTube), user account address, and user profile (with identicon JavaScript library). First, let's import the identicon.js and brand logo. We're going to use bootstrap to make our navigation bar.
 ```javascript
@@ -438,7 +437,7 @@ We're displaying the user address in this component by `this.props.account` meth
 
 ### Main.js
 
-<div align="center"><img src="https://user-images.githubusercontent.com/68826419/129247358-215c91c3-4031-4126-8a96-f7aba1aaff6d.png" /></div>
+<div align="center"><img src="../../../.gitbook/assets/dtube-9.png" /></div>
 
 To display the current uploaded video & title of the video we're going to use `this.props.currentHash` & `this.props.currentTitle` methods. Now, why we're using `https://ipfs.infura.io/ipfs/` here? Well, Infura will pin our IPFS file to keep the file online. Otherwise, If the normal IPFS node is down then it'll cause some issues to access the video. There are so many IPFS pinning services are out there, Infura is the most common one.
 ```javascript
@@ -466,7 +465,7 @@ class Main extends Component {
           </div>
 ```
 
-<div align="center"><img src="https://user-images.githubusercontent.com/68826419/129247706-5c15bb6f-3f27-42e6-8f67-40d8ee472929.png" /></div>
+<div align="center"><img src="../../../.gitbook/assets/dtube-10.png" /></div>
 
 Now, we're going to create a form in the video feed to choose the video file, input the title of the video, and upload the video. First, we're going to choose the video file, which will process to upload on IPFS with `this.props.captureFile` method. Then we're going to input the title of the `video ref={(input) => { this.videoTitle = input }}`. onSubmit event we'll upload the video file with the title of the video by `this.props.uploadVideo(title)` method.
 
@@ -494,7 +493,7 @@ Now, we're going to create a form in the video feed to choose the video file, in
             </form>
 ```
 
-<div align="center"><img src="https://user-images.githubusercontent.com/68826419/129251544-45a37df2-18d4-4691-8225-12f423ce7cf9.png" /></div>
+<div align="center"><img src="../../../.gitbook/assets/dtube-11.png" /></div>
 
 Finally, to list out all the previously uploaded videos with their title in the video feed we'll create `video.hash` and `video.title` methods. Whenever we click on any listed/previous videos the `changeVideo` function will convert the `video.hash` and `video.title` to `currentHash` & `currentTitle`, so that the clicked/selected video will appear on the screen. 
 
@@ -638,7 +637,7 @@ Summary
 
 let's run the react app on http://localhost:3000/ by `npm start` command. First, you'll see a MetaMask pop up to `connect` your MetaMask wallet. Now you can upload and share videos on your DApp which is deployed on polygon network. 
 
-<div align="center"><img src="https://user-images.githubusercontent.com/68826419/129350977-c5fbe1dc-c971-469f-bbda-db8e2b16f1c6.gif" /></div>
+<div align="center"><img src="../../../.gitbook/assets/dtube-12.gif" /></div>
 
 ## Host the DApp on IPFS using Fleek
 You cannot call this project a "Decentralized Application" if you are hosting it on any centralized server. To make it decentralized, again we're going to use IPFS. But the problem here is you cannot update/modify the project with same IPFS hash. IPFS uses content based addressing, hence each asset has its own unique address. This is where we're going to use "Fleek" IPFS hosting and Filecoin storage platform where you can **deploy the project, get a link, get SSL certificate, assign the domain, and update the project by simply connecting your GitHub repository**. When you push any changes on that repo, fleek will automatically update the changes with new IPFS hash on the same Fleek url. How cool is that? Let's see how it's done.
