@@ -30,7 +30,7 @@ To deploy the smart contracts on Matic you first have to create a Matic network 
 
 
 To get test Matic for deployment and testing,<br>
-`go to Matic Faucet -> Select Mumbai -> Paste wallet address -> Submit` Matic Faucet [link](https://faucet.matic.network).<br>
+`go to Matic Faucet -> Select Mumbai -> Paste wallet address -> Submit`, Matic Faucet [link](https://faucet.matic.network).<br>
 Done! check your wallet, you'll see some Matic there.
 
 <div align="center"><img src="https://user-images.githubusercontent.com/68826419/128877273-327f6d3d-24a2-4637-8392-004a1f62048a.png" /></div>
@@ -160,8 +160,7 @@ Change `https://rpc-mumbai.matic.today` by using [Infura custom RPC](https://inf
     },
   },
 ```
-Paste your PROJECT_ID there from .env file.
-
+Paste your PROJECT_ID there from .env file.<br>
 `truffle migrate --network matic --reset`
 
 If still dealing with error, try this 2nd fix.
@@ -180,8 +179,7 @@ Change `https://rpc-mumbai.matic.today` by using [Matic custom RPC](https://rpc.
     },
   },
 ```
-Paste your PROJECT_ID there from .env file.
-
+Paste your PROJECT_ID there from .env file.<br>
 `truffle migrate --network matic --reset`
 
 ### Error:
@@ -192,8 +190,7 @@ Paste your PROJECT_ID there from .env file.
 ```
 
 ### Fix:
-`npm install @truffle/hdwallet-provider@1.4.0`
-
+`npm install @truffle/hdwallet-provider@1.4.0`<br>
 Truffle hdwallet-provider version 1.4.0 will fix this error.
 
 ### Error:
