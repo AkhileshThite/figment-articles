@@ -218,6 +218,6 @@ Just add `networkCheckTimeout: 100000`
 *If you discover any new errors and If you know the solution for it, then feel free to make a PR, we'll add your Error-Fix here.*
 
 ## References
-*Truffle docs: https://www.trufflesuite.com/docs/truffle/overview*__ 
-*Polygon (Matic) docs: https://docs.matic.network/docs/develop/getting-started*__
-*GitHub repo: https://github.com/AkhileshThite/DTube*__ 
+*Truffle docs: https://www.trufflesuite.com/docs/truffle/overview*
+*Polygon (Matic) docs: https://docs.matic.network/docs/develop/getting-started*
+*GitHub repo: https://github.com/AkhileshThite/DTube*
