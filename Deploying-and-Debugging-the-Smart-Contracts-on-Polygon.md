@@ -13,14 +13,14 @@ This tutorial assumes that you have some beginner-level experience in programmin
 To deploy the smart contracts on Matic you first have to add an RPC endpoint in your MetaMask wallet.
 `Settings -> Networks -> Add network -> Save`
 
-![](../../../.gitbook/assets/deploy-&-debug-on-polygon-1.png)
+![](./assets/deploy-&-debug-on-polygon-1.png)
 
 To get test Matic for deployment and testing,
 * `go to Matic Faucet -> Select Mumbai -> Paste wallet address -> Submit`, Matic Faucet [link](https://faucet.matic.network).
 
 Done! check your wallet, you'll see some Matic there.
 
-![](../../../.gitbook/assets/deploy-&-debug-on-polygon-2.png)
+![](./assets/deploy-&-debug-on-polygon-2.png)
 
 # truffle-config
 * `truffle-config.js` for Mac users
